@@ -37,8 +37,6 @@
 
 #define THUMBS THUMBS_LEFT THUMBS_RIGHT
 
-#define _SCRNS &kp LG(LS(NUMBER_4))
-
 &lt {
     quick-tap-ms = <300>;
     global-quick-tap;
@@ -93,6 +91,16 @@
     #define _H_CTL &hm_r RCTRL H
     #define _R_OPT &hm_l LALT R   // Option on ring finger
     #define _I_OPT &hm_r RALT I
+
+    // MacOS shortcuts
+    #define _1PASS &kp LG(BSLH)      // 1Password
+    #define _APEX  &kp LC(UP)        // App exposé
+    #define _FQUIT &kp LA(LG(ESC))   // Force quit
+    #define _MCTL  &kp LC(DOWN)      // Mission control
+    #define _SCRNS &kp LG(LS(N4))    // Screenshot
+    #define _EMOJI &kp LC(LG(SPACE)) // Emoji picker
+    #define _NEXTS &kp LC(RIGHT)     // Next screen
+    #define _PREVS &kp LC(LEFT)      // Previous screen
 
     keymap {
         compatible = "zmk,keymap";
@@ -150,11 +158,11 @@
 
         layer_mac {
             bindings = <
- &trans  &trans  &trans           &trans             &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans       &kp LC(UP)       &kp LC(DOWN)  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans           _SCRNS       &kp LG(BSLH)  &trans            &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &kp LA(LG(ESC))  &kp LC(LG(SPACE))  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans           &trans             &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  _APEX   _MCTL   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  _SCRNS  _1PASS  _EMOJI  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  _PREVS  _NEXTS  _FQUIT  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
