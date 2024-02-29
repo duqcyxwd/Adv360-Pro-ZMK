@@ -95,6 +95,17 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        Win_Base_Prev_Word {
+            bindings = <&kp LC(LEFT)>;
+            key-positions = <71 72>;
+            layers = <3>;
+            timeout-ms = <100>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -130,11 +141,11 @@
 
         WinBase {
             bindings = <
-&kp EQUAL   &kp N1  &kp N2     &kp N3     &kp N4     &kp N5  &trans                                                  &trans  &kp N6  &kp N7    &kp N8     &kp N9      &kp N0     &kp MINUS
-&kp TAB     &kp Q   &kp W      &kp E      &kp R      &kp T   &none                                                   &trans  &kp Y   &kp U     &kp I      &kp O       &kp P      &kp NON_US_BACKSLASH
-&kp ESCAPE  &kp A   &kp S      &kp D      &kp F      &kp G   &trans              &trans  &trans      &trans  &trans  &trans  &kp H   &kp J     &kp K      &kp L       &kp SEMI   &kp APOS
-&kp LSHIFT  &kp Z   &kp X      &kp C      &kp V      &kp B                               &trans      &trans                  &kp N   &kp M     &kp COMMA  &kp PERIOD  &kp SLASH  &kp RSHIFT
-&trans      &trans  &kp LC(X)  &kp LC(C)  &kp LC(V)          &space 4 BACKSPACE  &trans  &trans      &trans  &trans  &trans          &kp LEFT  &kp DOWN   &kp UP      &kp RIGHT  &trans
+&kp EQUAL   &kp N1        &kp N2       &kp N3           &kp N4          &kp N5  &trans                                                  &trans  &kp N6  &kp N7          &kp N8            &kp N9       &kp N0                &kp MINUS
+&kp TAB     &kp Q         &kp W        &kp E            &kp R           &kp T   &none                                                   &trans  &kp Y   &kp U           &kp I             &kp O        &kp P                 &kp NON_US_BACKSLASH
+&kp ESCAPE  &hml A LCTRL  &hml S LWIN  &hml D LEFT_ALT  &hmsl F LSHIFT  &kp G   &trans              &trans  &trans      &trans  &trans  &trans  &kp H   &hmsr J RSHIFT  &hml K RIGHT_ALT  &hmr RWIN L  &hmr RCTRL SEMICOLON  &kp APOS
+&kp LSHIFT  &kp Z         &kp X        &kp C            &kp V           &kp B                               &trans      &trans                  &kp N   &kp M           &kp COMMA         &kp PERIOD   &kp SLASH             &kp RSHIFT
+&trans      &trans        &kp LC(X)    &kp LC(C)        &kp LC(V)               &space 4 BACKSPACE  &trans  &trans      &trans  &trans  &trans          &kp LEFT        &kp DOWN          &kp UP       &kp RIGHT             &trans
             >;
         };
 
