@@ -131,7 +131,7 @@
         Win_Nav_Next_Word {
             bindings = <&kp RC(RIGHT)>;
             key-positions = <31 32>;
-            layers = <3>;
+            layers = <5>;
             timeout-ms = <50>;
         };
     };
