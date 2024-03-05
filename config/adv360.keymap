@@ -111,7 +111,28 @@
             bindings = <&kp LC(LEFT)>;
             key-positions = <71 72>;
             layers = <3>;
-            timeout-ms = <100>;
+            timeout-ms = <50>;
+        };
+
+        Win_Base_Next_Word {
+            bindings = <&kp RC(RIGHT)>;
+            key-positions = <73 74>;
+            layers = <3>;
+            timeout-ms = <50>;
+        };
+
+        Win_Nav_Prev_Word {
+            bindings = <&kp LC(LEFT)>;
+            key-positions = <30 31>;
+            layers = <5>;
+            timeout-ms = <50>;
+        };
+
+        Win_Nav_Next_Word {
+            bindings = <&kp RC(RIGHT)>;
+            key-positions = <31 32>;
+            layers = <3>;
+            timeout-ms = <50>;
         };
     };
 
@@ -154,7 +175,7 @@
 &kp TAB     &kp Q         &kp W        &kp E            &kp R           &kp T   &none                                                                    &trans              &kp Y   &kp U           &kp I             &kp O        &kp P                 &kp NON_US_BACKSLASH
 &kp ESCAPE  &hml LCTRL A  &hml LWIN S  &hml LEFT_ALT D  &hmsl LSHIFT F  &kp G   &trans          &trans     &trans        &trans         &trans           &trans              &kp H   &hmsr RSHIFT J  &hml RIGHT_ALT K  &hmr RWIN L  &hmr RCTRL SEMICOLON  &kp APOS
 &kp LSHIFT  &kp Z         &kp X        &kp C            &kp V           &kp B                              &kp HOME      &kp PAGE_UP                                         &kp N   &kp M           &kp COMMA         &kp PERIOD   &kp SLASH             &kp RSHIFT
-&trans      &trans        &kp LC(X)    &kp LC(C)        &kp LC(V)               &space 5 SPACE  &kp ENTER  &kp END       &kp PAGE_DOWN  &space 6 DELETE  &space 4 BACKSPACE          &kp LEFT        &kp DOWN          &kp UP       &kp RIGHT             &trans
+&trans      &w_UndoRedo   &kp LC(X)    &kp LC(C)        &kp LC(V)               &space 5 SPACE  &kp ENTER  &kp END       &kp PAGE_DOWN  &space 6 DELETE  &space 4 BACKSPACE          &kp LEFT        &kp DOWN          &kp UP       &kp RIGHT             &trans
             >;
         };
 
@@ -170,11 +191,11 @@
 
         WinNavigation {
             bindings = <
-&none  &none  &none  &none  &none  &none  &none                                  &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none                                  &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none  &none  &none      &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none                &none      &none                &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none         &none  &none  &none      &none  &none  &none         &none  &none  &none  &none  &none
+&none  &none  &none     &none         &none      &none  &none                                  &none  &none  &none       &none     &none     &none      &none
+&none  &none  &none     &kp UP_ARROW  &none      &none  &none                                  &none  &none  &none       &none     &none     &none      &none
+&none  &none  &kp LEFT  &kp DOWN      &kp RIGHT  &none  &none  &none  &none      &none  &none  &none  &none  &kp RSHIFT  &kp RALT  &kp RGUI  &kp RCTRL  &none
+&none  &none  &none     &none         &none      &none                &none      &none                &none  &none       &none     &none     &none      &none
+&none  &none  &none     &none         &none             &none  &none  &none      &none  &none  &none         &none       &none     &none     &none      &none
             >;
         };
 
