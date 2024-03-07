@@ -147,6 +147,8 @@
         w_alt_tab {
             bindings = <&w_alt_tab>;
             key-positions = <63 64>;
+            layers = <3>;
+            timeout-ms = <50>;
         };
     };
 
