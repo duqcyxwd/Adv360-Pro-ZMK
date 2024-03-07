@@ -143,6 +143,11 @@
             layers = <5>;
             timeout-ms = <50>;
         };
+
+        w_alt_tab {
+            bindings = <&w_alt_tab>;
+            key-positions = <63 64>;
+        };
     };
 
     macros {
@@ -153,6 +158,13 @@
             label = "SELECT_NONE";
             wait-ms = <1>;
         };
+
+        w_alt_tab: w_alt_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LALT &mo 7>;
+            label = "W_ALT_TAB";
+        };
     };
 
     keymap {
@@ -160,7 +172,7 @@
 
         MacBase {
             bindings = <
-&kp GRAVE  &kp N1       &kp N2       &kp N3        &kp N4          &kp N5  &mo 7                                                              &mo 7      &kp N6  &kp N7          &kp N8                &kp N9            &kp N0                    &kp MINUS
+&kp GRAVE  &kp N1       &kp N2       &kp N3        &kp N4          &kp N5  &mo 8                                                              &mo 8      &kp N6  &kp N7          &kp N8                &kp N9            &kp N0                    &kp MINUS
 &kp TAB    &kp Q        &kp W        &kp E         &kp R           &kp T   &none                                                              &none      &kp Y   &kp U           &kp I                 &kp O             &kp P                     &kp BSLH
 &kp ESC    &hml LGUI A  &hml LALT S  &hml LCTRL D  &hmsl LSHIFT F  &kp G   &none               &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &hmsr RSHIFT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_ALT L  &hmr RIGHT_GUI SEMICOLON  &kp SQT
 &kp LSHFT  &kp Z        &kp X        &kp C         &kp V           &kp B                                  &kp HOME      &kp PG_UP                        &kp N   &kp M           &kp COMMA             &kp DOT           &kp FSLH                  &kp RSHFT
@@ -170,7 +182,7 @@
 
         MacSymbols {
             bindings = <
-&kp BACKSLASH    &kp POUND         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS           &kp PERCENT      &trans                                                          &mo 7      &kp N6  &kp KP_NUM       &kp KP_EQUAL     &kp KP_DIVIDE    &kp KP_MULTIPLY  &kp MINUS
+&kp BACKSLASH    &kp POUND         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS           &kp PERCENT      &trans                                                          &mo 8      &kp N6  &kp KP_NUM       &kp KP_EQUAL     &kp KP_DIVIDE    &kp KP_MULTIPLY  &kp MINUS
 &kp QUESTION     &kp LEFT_BRACE    &kp DOUBLE_QUOTES     &kp SINGLE_QUOTE       &kp RIGHT_BRACE    &kp KP_MINUS     &kp QUESTION                                                    &none      &kp Y   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS     &kp BSLH
 &kp EXCLAMATION  &kp LEFT_BRACKET  &kp KP_EQUAL          &kp UNDERSCORE         &kp RIGHT_BRACKET  &kp KP_MULTIPLY  &kp EXCLAMATION  &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp SEMICOLON    &kp SQT
 &kp COLON        &kp LESS_THAN     &kp AMPERSAND         &kp PIPE               &kp GREATER_THAN   &kp KP_SLASH                                 &kp HOME      &kp PG_UP                        &kp N   &kp KP_N1        &kp COMMA        &kp PERIOD       &kp SLASH        &kp RSHFT
@@ -180,7 +192,7 @@
 
         MacNavigation {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 1                                      &mo 7   &kp F7    &kp F8    &kp F9        &kp F10    &kp F11  &kp F12
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 1                                      &mo 8   &kp F7    &kp F8    &kp F9        &kp F10    &kp F11  &kp F12
 &trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans    &trans    &trans        &trans     &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans    &trans    &trans        &trans     &trans   &trans
@@ -190,7 +202,7 @@
 
         WinBase {
             bindings = <
-&kp LA(LS(ESCAPE))  &kp N1        &kp N2       &kp N3           &kp N4          &kp N5  &mo 7                                                                        &mo 7           &kp N6  &kp N7          &kp N8            &kp N9       &kp N0                &kp LA(ESCAPE)
+&kp LA(LS(ESCAPE))  &kp N1        &kp N2       &kp N3           &kp N4          &kp N5  &mo 8                                                                        &mo 8           &kp N6  &kp N7          &kp N8            &kp N9       &kp N0                &kp LA(ESCAPE)
 &kp TAB             &kp Q         &kp W        &kp E            &kp R           &kp T   &none                                                                        &trans          &kp Y   &kp U           &kp I             &kp O        &kp P                 &kp NON_US_BACKSLASH
 &kp ESCAPE          &hml LCTRL A  &hml LWIN S  &hml LEFT_ALT D  &hmsl LSHIFT F  &kp G   &trans              &trans           &trans        &trans         &trans     &trans          &kp H   &hmsr RSHIFT J  &hml RIGHT_ALT K  &hmr RWIN L  &hmr RCTRL SEMICOLON  &kp APOS
 &kp LSHIFT          &kp Z         &kp X        &kp C            &kp V           &kp B                                        &kp HOME      &kp PAGE_UP                               &kp N   &kp M           &kp COMMA         &kp PERIOD   &kp SLASH             &kp RSHIFT
@@ -210,11 +222,11 @@
 
         WinNavigation {
             bindings = <
-&none  &none      &none            &none         &none        &none          &none                                          &none  &none  &none       &none     &none       &none      &none
-&none  &none      &kp HOME         &kp UP_ARROW  &kp END      &kp PAGE_UP    &none                                          &none  &none  &kp RC(F)   &kp F3    &kp RS(F3)  &none      &none
-&none  &none      &kp LEFT         &kp DOWN      &kp RIGHT    &kp PAGE_DOWN  &none          &none  &none      &none  &none  &none  &none  &kp RSHIFT  &kp RALT  &kp RGUI    &kp RCTRL  &none
-&none  &kp LC(W)  &kp LS(LC(TAB))  &kp LC(L)     &kp LC(TAB)  &kp LC(T)                            &none      &none                &none  &none       &none     &none       &none      &none
-&none  &none      &none            &none         &none                       &kp BACKSPACE  &none  &none      &none  &none  &none         &none       &none     &none       &none      &none
+&none  &none      &none            &none         &none        &none          &none                                          &none  &none  &none             &none             &none             &none             &none
+&none  &none      &kp HOME         &kp UP_ARROW  &kp END      &kp PAGE_UP    &none                                          &none  &none  &kp RC(F)         &kp F3            &kp RS(F3)        &none             &none
+&none  &none      &kp LEFT         &kp DOWN      &kp RIGHT    &kp PAGE_DOWN  &none          &none  &none      &none  &none  &none  &none  &kp RSHIFT        &kp RALT          &kp RGUI          &kp RCTRL         &none
+&none  &kp LC(W)  &kp LS(LC(TAB))  &kp LC(L)     &kp LC(TAB)  &kp LC(T)                            &none      &none                &none  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &none
+&none  &none      &none            &none         &none                       &kp BACKSPACE  &none  &none      &none  &none  &none         &kp LG(N5)        &kp LG(NUMBER_6)  &kp LG(N7)        &kp LG(N8)        &none
             >;
         };
 
@@ -225,6 +237,16 @@
 &none  &kp LCTRL  &kp LGUI  &kp LALT  &kp LSHIFT  &none  &none  &kp LG(LS(S))  &none      &none  &none  &none          &none  &kp F1            &kp F2            &kp F3            &kp F10  &kp PRINTSCREEN
 &none  &none      &none     &none     &none       &none                        &none      &none                        &none  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &none    &kp SCROLLLOCK
 &none  &none      &none     &none     &none              &none  &none          &none      &none  &none  &kp LA(LS(S))         &kp LG(NUMBER_4)  &kp LG(N5)        &kp LG(NUMBER_6)  &none    &kp PAUSE_BREAK
+            >;
+        };
+
+        shift_tab_tab {
+            bindings = <
+&none  &none  &none  &none  &none  &none  &none                                          &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none                                          &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none        &none    &none      &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                        &none      &none                &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none         &kp LS(TAB)  &kp TAB  &none      &none  &none  &none         &none  &none  &none  &none  &none
             >;
         };
 
