@@ -145,7 +145,7 @@
         };
 
         w_alt_tab {
-            bindings = <&w_alt_tab>;
+            bindings = <&w_alt_tab 7 LEFT_ALT>;
             key-positions = <63 64>;
             layers = <3>;
             timeout-ms = <50>;
@@ -162,9 +162,21 @@
         };
 
         w_alt_tab: w_alt_tab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LALT &mo 7>;
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings =
+                <&macro_param_1to1>,
+                <&macro_press>,
+                <&mo MACRO_PLACEHOLDER &macro_param_2to1>,
+                <&macro_press>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_param_2to1>,
+                <&macro_release>,
+                <&kp MACRO_PLACEHOLDER &macro_param_1to1>,
+                <&macro_release>,
+                <&mo MACRO_PLACEHOLDER>;
+
             label = "W_ALT_TAB";
         };
     };
