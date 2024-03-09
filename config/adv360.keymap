@@ -129,35 +129,35 @@
         Win_Base_Prev_Word {
             bindings = <&kp LC(LEFT)>;
             key-positions = <71 72>;
-            layers = <3>;
+            layers = <4>;
             timeout-ms = <50>;
         };
 
         Win_Base_Next_Word {
             bindings = <&kp RC(RIGHT)>;
             key-positions = <73 74>;
-            layers = <3>;
+            layers = <4>;
             timeout-ms = <50>;
         };
 
         Win_Nav_Prev_Word {
             bindings = <&kp LC(LEFT)>;
             key-positions = <30 31>;
-            layers = <5>;
+            layers = <6>;
             timeout-ms = <50>;
         };
 
         Win_Nav_Next_Word {
             bindings = <&kp RC(RIGHT)>;
             key-positions = <31 32>;
-            layers = <5>;
+            layers = <6>;
             timeout-ms = <50>;
         };
 
         w_alt_tab {
             bindings = <&w_alt_tab_behaviour 7 LEFT_ALT>;
             key-positions = <63 64>;
-            layers = <3>;
+            layers = <4>;
             timeout-ms = <50>;
         };
     };
@@ -195,14 +195,14 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 7>,
+                <&mo 8>,
                 <&macro_press>,
                 <&kp LEFT_ALT>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&kp LEFT_ALT>,
                 <&macro_release>,
-                <&mo 7>;
+                <&mo 8>;
 
             label = "TEST";
         };
@@ -213,41 +213,51 @@
 
         MacBase {
             bindings = <
-&kp GRAVE  &kp N1       &kp N2       &kp N3        &kp N4          &kp N5  &mo 8                                                              &mo 8      &kp N6  &kp N7          &kp N8                &kp N9            &kp N0                    &kp MINUS
-&kp TAB    &kp Q        &kp W        &kp E         &kp R           &kp T   &none                                                              &none      &kp Y   &kp U           &kp I                 &kp O             &kp P                     &kp BSLH
-&kp ESC    &hml LGUI A  &hml LALT S  &hml LCTRL D  &hmsl LSHIFT F  &kp G   &none               &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &hmsr RSHIFT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_ALT L  &hmr RIGHT_GUI SEMICOLON  &kp SQT
-&kp LSHFT  &kp Z        &kp X        &kp C         &kp V           &kp B                                  &kp HOME      &kp PG_UP                        &kp N   &kp M           &kp COMMA             &kp DOT           &kp FSLH                  &kp RSHFT
-&mo 2      &M_UndoRedo  &kp LG(X)    &kp LG(C)     &kp LG(V)               &space 1 BACKSPACE  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE          &kp LEFT        &kp DOWN              &kp UP_ARROW      &kp RIGHT                 &mo 2
+&kp GRAVE  &kp N1       &kp N2       &kp N3        &kp N4          &kp N5  &mo 9                                                                    &mo 9      &kp N6  &kp N7          &kp N8                &kp N9            &kp N0                    &kp MINUS
+&kp TAB    &kp Q        &kp W        &kp E         &kp R           &kp T   &none                                                                    &none      &kp Y   &kp U           &kp I                 &kp O             &kp P                     &kp BSLH
+&kp ESC    &hml LGUI A  &hml LALT S  &hml LCTRL D  &hmsl LSHIFT F  &kp G   &none               &kp LCTRL        &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &hmsr RSHIFT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_ALT L  &hmr RIGHT_GUI SEMICOLON  &kp SQT
+&kp LSHFT  &kp Z        &kp X        &kp C         &kp V           &kp B                                        &kp END       &kp PG_UP                        &kp N   &kp M           &kp COMMA             &kp DOT           &kp FSLH                  &kp RSHFT
+&mo 2      &M_UndoRedo  &kp LG(X)    &kp LG(C)     &kp LG(V)               &space 1 BACKSPACE  &space 3 DELETE  &kp HOME      &kp PG_DN  &kp ENTER  &kp SPACE          &kp LEFT        &kp DOWN              &kp UP_ARROW      &kp RIGHT                 &mo 2
             >;
         };
 
         MacSymbols {
             bindings = <
-&kp BACKSLASH    &kp POUND         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS           &kp PERCENT      &trans                                                          &mo 8      &kp N6  &kp KP_NUM       &kp KP_EQUAL     &kp KP_DIVIDE    &kp KP_MULTIPLY  &kp MINUS
-&kp QUESTION     &kp LEFT_BRACE    &kp DOUBLE_QUOTES     &kp SINGLE_QUOTE       &kp RIGHT_BRACE    &kp KP_MINUS     &kp QUESTION                                                    &none      &kp Y   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS     &kp BSLH
-&kp EXCLAMATION  &kp LEFT_BRACKET  &kp KP_EQUAL          &kp UNDERSCORE         &kp RIGHT_BRACKET  &kp KP_MULTIPLY  &kp EXCLAMATION  &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp SEMICOLON    &kp SQT
-&kp COLON        &kp LESS_THAN     &kp AMPERSAND         &kp PIPE               &kp GREATER_THAN   &kp KP_SLASH                                 &kp HOME      &kp PG_UP                        &kp N   &kp KP_N1        &kp COMMA        &kp PERIOD       &kp SLASH        &kp RSHFT
-&mo 2            &kp CARET         &kp TILDE             &kp AT                 &kp DOLLAR                          &kp BSPC         &kp TAB    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE          &kp LEFT         &kp DOWN         &kp UP_ARROW     &kp RIGHT        &mo 2
+&kp BACKSLASH    &kp POUND         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS           &kp PERCENT      &trans                                               &none      &none  &kp N7        &kp N8        &kp N9        &kp KP_MULTIPLY  &kp MINUS
+&kp QUESTION     &kp LEFT_BRACE    &kp SINGLE_QUOTE      &kp DOUBLE_QUOTES      &kp RIGHT_BRACE    &kp KP_MINUS     &kp PERCENT                                          &none      &none  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MINUS     &kp BSLH
+&kp EXCLAMATION  &kp LEFT_BRACKET  &kp UNDER             &kp EQUAL              &kp RIGHT_BRACKET  &kp KP_MULTIPLY  &kp PLUS     &none  &none      &kp LGUI   &kp RCTRL  &none      &none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SEMICOLON    &kp BACKSPACE
+&kp COLON        &kp LESS_THAN     &kp PIPE              &kp AMPERSAND          &kp GREATER_THAN   &kp KP_SLASH                         &none      &kp PG_UP                        &none  &kp N0        &kp COMMA     &kp PERIOD    &kp SLASH        &kp RSHFT
+&kp GRAVE        &kp CARET         &kp AT                &kp TILDE              &kp DOLLAR                          &trans       &none  &none      &kp PG_DN  &kp ENTER  &kp SPACE         &kp LEFT      &kp DOWN      &kp UP_ARROW  &kp RIGHT        &none
             >;
         };
 
         MacNavigation {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 1                                      &mo 8   &kp F7    &kp F8    &kp F9        &kp F10    &kp F11  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans    &trans    &trans        &trans     &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans    &trans    &trans        &trans     &trans   &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans            &trans    &trans        &trans     &trans   &trans
+&none  &none      &none         &none         &none          &none          &none                                  &none  &none     &none     &none         &none      &none  &none
+&none  &none      &kp LG(LEFT)  &kp UP_ARROW  &kp LG(RIGHT)  &kp PAGE_UP    &none                                  &none  &none     &none     &none         &none      &none  &none
+&none  &none      &kp LEFT      &kp DOWN      &kp RIGHT      &kp PAGE_DOWN  &none  &none  &none      &none  &none  &none  &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &none  &none
+&none  &kp LG(W)  &none         &none         &none          &none                        &none      &none                &none     &none     &none         &none      &none  &none
+&none  &none      &none         &none         &none                         &none  &none  &none      &none  &none  &none            &none     &none         &none      &none  &none
+            >;
+        };
+
+        Mac_Fn {
+            bindings = <
+&none  &none             &none     &none      &none       &none  &none                                  &none                 &none  &kp F7  &kp F8  &kp F9  &kp F12  &kp INSERT
+&none  &none             &none     &none      &none       &none  &none                                  &none                 &none  &kp F4  &kp F5  &kp F6  &kp F11  &kp DELETE
+&none  &kp LEFT_COMMAND  &kp LALT  &kp LCTRL  &kp LSHIFT  &none  &none  &none  &none      &none  &none  &none                 &none  &kp F1  &kp F2  &kp F3  &kp F10  &kp PRINTSCREEN
+&none  &none             &none     &none      &none       &none                &none      &none                               &none  &none   &none   &none   &none    &kp SCROLLLOCK
+&none  &none             &none     &none      &none              &none  &none  &none      &none  &none  &kp LS(LG(NUMBER_4))         &none   &none   &none   &none    &kp PAUSE_BREAK
             >;
         };
 
         WinBase {
             bindings = <
-&kp LA(LS(ESCAPE))  &kp N1        &kp N2       &kp N3           &kp N4                        &kp N5  &mo 8                                                                        &mo 8           &kp N6  &kp N7          &kp N8            &kp N9       &kp N0                &kp LA(ESCAPE)
+&kp LA(LS(ESCAPE))  &kp N1        &kp N2       &kp N3           &kp N4                        &kp N5  &mo 9                                                                        &mo 9           &kp N6  &kp N7          &kp N8            &kp N9       &kp N0                &kp LA(ESCAPE)
 &kp TAB             &kp Q         &kp W        &kp E            &kp R                         &kp T   &none                                                                        &trans          &kp Y   &kp U           &kp I             &kp O        &kp P                 &kp NON_US_BACKSLASH
 &kp ESCAPE          &hml LCTRL A  &hml LWIN S  &hml LEFT_ALT D  &hmsl LSHIFT F                &kp G   &trans              &trans           &trans        &trans         &trans     &trans          &kp H   &hmsr RSHIFT J  &hml RIGHT_ALT K  &hmr RWIN L  &hmr RCTRL SEMICOLON  &kp APOS
 &kp LSHIFT          &kp Z         &kp X        &kp C            &kp V                         &kp B                                        &kp END       &kp PAGE_UP                               &kp N   &kp M           &kp COMMA         &kp PERIOD   &kp SLASH             &kp RSHIFT
-&w_select_all_none  &w_UndoRedo   &kp LC(X)    &kp LC(C)        &w_alt_tab_behaviour 0 LC(V)          &space 4 BACKSPACE  &space 6 DELETE  &kp HOME      &kp PAGE_DOWN  &kp ENTER  &space 5 SPACE          &kp LEFT        &kp DOWN          &kp UP       &kp RIGHT             &trans
+&w_select_all_none  &w_UndoRedo   &kp LC(X)    &kp LC(C)        &w_alt_tab_behaviour 0 LC(V)          &space 5 BACKSPACE  &space 7 DELETE  &kp HOME      &kp PAGE_DOWN  &kp ENTER  &space 6 SPACE          &kp LEFT        &kp DOWN          &kp UP       &kp RIGHT             &trans
             >;
         };
 
@@ -297,7 +307,7 @@
 &none  &none         &none         &none         &none         &none         &bootloader                                            &bootloader             &none  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none       &none  &none
 &none  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none  &kp K_PREV            &kp K_PLAY_PAUSE      &kp K_NEXT  &none  &none
 &none  &none         &none         &none         &macro_ver    &none                             &none      &none                                           &none  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp K_MUTE  &none  &none
-&none  &none         &none         &none         &none                       &to 0        &to 3  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                &bl BL_INC            &bl BL_DEC            &none       &none  &none
+&none  &none         &none         &none         &none                       &to 0        &to 4  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                &bl BL_INC            &bl BL_DEC            &none       &none  &none
             >;
         };
     };
