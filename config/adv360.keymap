@@ -121,6 +121,15 @@
             tapping-term-ms = <150>;
             flavor = "hold-preferred";
         };
+
+        m_alt_tab_behaviour: m_alt_tab_behaviour {
+            compatible = "zmk,behavior-hold-tap";
+            label = "M_ALT_TAB_BEHAVIOUR";
+            bindings = <&m_alt_tab_layer>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
     };
 
     combos {
@@ -160,6 +169,41 @@
             layers = <4>;
             timeout-ms = <50>;
         };
+
+        Mac_Base_Prev_Word {
+            bindings = <&kp LA(LEFT)>;
+            key-positions = <71 72>;
+            timeout-ms = <50>;
+            layers = <0 1>;
+        };
+
+        Mac_Base_Next_Word {
+            bindings = <&kp RA(RIGHT)>;
+            key-positions = <73 74>;
+            timeout-ms = <50>;
+            layers = <0 1>;
+        };
+
+        Mac_Nav_Pev_Word {
+            bindings = <&kp LA(LEFT)>;
+            key-positions = <30 31>;
+            timeout-ms = <50>;
+            layers = <2>;
+        };
+
+        Mac_Nav_Next_Word {
+            bindings = <&kp RA(RIGHT)>;
+            key-positions = <31 32>;
+            timeout-ms = <50>;
+            layers = <2>;
+        };
+
+        Cappy {
+            bindings = <&caps_word>;
+            key-positions = <46 65>;
+            timeout-ms = <50>;
+            layers = <0 4>;
+        };
     };
 
     macros {
@@ -171,7 +215,7 @@
             wait-ms = <1>;
         };
 
-        w_alt_tab: w_alt_tab {
+        layer_with_mod: w_alt_tab {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
             bindings =
@@ -206,6 +250,23 @@
 
             label = "TEST";
         };
+
+        m_alt_tab_layer: m_alt_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&mo 8>,
+                <&macro_press>,
+                <&kp LGUI>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LGUI>,
+                <&macro_press>,
+                <&mo 8>;
+
+            label = "M_ALT_TAB";
+        };
     };
 
     keymap {
@@ -213,11 +274,11 @@
 
         MacBase {
             bindings = <
-&kp GRAVE  &kp N1       &kp N2       &kp N3        &kp N4          &kp N5  &mo 9                                                                    &mo 9           &kp N6  &kp N7          &kp N8                &kp N9            &kp N0                    &kp MINUS
-&kp TAB    &kp Q        &kp W        &kp E         &kp R           &kp T   &none                                                                    &none           &kp Y   &kp U           &kp I                 &kp O             &kp P                     &kp BSLH
-&kp ESC    &hml LGUI A  &hml LALT S  &hml LCTRL D  &hmsl LSHIFT F  &kp G   &none               &kp LCTRL        &kp LALT      &kp LGUI   &kp RCTRL  &none           &kp H   &hmsr RSHIFT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_ALT L  &hmr RIGHT_GUI SEMICOLON  &kp SQT
-&kp LSHFT  &kp Z        &kp X        &kp C         &kp V           &kp B                                        &kp END       &kp PG_UP                             &kp N   &kp M           &kp COMMA             &kp DOT           &kp FSLH                  &kp RSHFT
-&mo 2      &M_UndoRedo  &kp LG(X)    &kp LG(C)     &kp LG(V)               &space 1 BACKSPACE  &space 3 DELETE  &kp HOME      &kp PG_DN  &kp ENTER  &space 2 SPACE          &kp LEFT        &kp DOWN              &kp UP_ARROW      &kp RIGHT                 &mo 2
+&kp GRAVE                      &kp N1       &kp N2       &kp N3        &kp N4          &kp N5  &mo 9                                                                      &mo 9                 &kp N6  &kp N7          &kp N8                &kp N9            &kp N0                    &kp MINUS
+&kp TAB                        &kp Q        &kp W        &kp E         &kp R           &kp T   &none                                                                      &none                 &kp Y   &kp U           &kp I                 &kp O             &kp P                     &kp BSLH
+&m_alt_tab_behaviour 0 ESCAPE  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hmsl LSHIFT F  &kp G   &kp LS(LA(LC(LGUI)))  &kp LCTRL        &kp LALT      &kp LGUI   &kp RCTRL  &kp RS(RA(RC(RGUI)))  &kp H   &hmsr RSHIFT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_ALT L  &hmr RIGHT_GUI SEMICOLON  &kp SQT
+&kp LSHFT                      &kp Z        &kp X        &kp C         &kp V           &kp B                                          &kp END       &kp PG_UP                                   &kp N   &kp M           &kp COMMA             &kp DOT           &kp FSLH                  &kp RSHFT
+&mo 2                          &M_UndoRedo  &kp LG(X)    &kp LG(C)     &kp LG(V)               &space 1 BACKSPACE    &space 3 DELETE  &kp HOME      &kp PG_DN  &kp ENTER  &space 2 SPACE                &kp LEFT        &kp DOWN              &kp UP_ARROW      &kp RIGHT                 &mo 2
             >;
         };
 
@@ -233,21 +294,21 @@
 
         MacNavigation {
             bindings = <
-&none  &none       &none            &none         &none          &none          &none                                               &none  &none  &none            &none      &none          &none              &none
-&none  &none       &kp LG(LEFT)     &kp UP_ARROW  &kp LG(RIGHT)  &kp PAGE_UP    &none                                               &none  &none  &kp RG(F)        &kp RG(G)  &kp RG(RS(G))  &none              &none
-&none  &kp LSHIFT  &kp LEFT         &kp DOWN      &kp RIGHT      &kp PAGE_DOWN  &none          &none       &none      &none  &none  &none  &none  &kp RIGHT_SHIFT  &kp RCTRL  &kp RALT       &kp RIGHT_COMMAND  &none
-&none  &kp LG(W)   &kp LS(LC(TAB))  &kp LG(L)     &kp LC(TAB)    &kp LG(T)                                 &none      &none                &none  &none            &none      &none          &none              &none
-&none  &none       &none            &none         &none                         &kp BACKSPACE  &kp DELETE  &none      &none  &none  &none         &none            &none      &none          &none              &none
+&none  &none       &none            &none         &none          &none          &none                                               &none          &none  &none            &none      &none          &none              &none
+&none  &none       &kp LG(LEFT)     &kp UP_ARROW  &kp LG(RIGHT)  &kp PAGE_UP    &none                                               &none          &none  &kp RG(F)        &kp RG(G)  &kp RG(RS(G))  &none              &none
+&none  &kp LSHIFT  &kp LEFT         &kp DOWN      &kp RIGHT      &kp PAGE_DOWN  &kp LC(LEFT)   &none       &none      &none  &none  &kp RC(RIGHT)  &none  &kp RIGHT_SHIFT  &kp RCTRL  &kp RALT       &kp RIGHT_COMMAND  &none
+&none  &kp LG(W)   &kp LS(LC(TAB))  &kp LG(L)     &kp LC(TAB)    &kp LG(T)                                 &none      &none                        &none  &none            &none      &none          &none              &none
+&none  &none       &none            &none         &none                         &kp BACKSPACE  &kp DELETE  &none      &none  &none  &none                 &none            &none      &none          &none              &none
             >;
         };
 
         Mac_Fn {
             bindings = <
-&none  &none             &none     &none      &none       &none  &none                                  &none                 &none  &kp F7  &kp F8  &kp F9  &kp F12  &kp INSERT
-&none  &none             &none     &none      &none       &none  &none                                  &none                 &none  &kp F4  &kp F5  &kp F6  &kp F11  &kp DELETE
-&none  &kp LEFT_COMMAND  &kp LALT  &kp LCTRL  &kp LSHIFT  &none  &none  &none  &none      &none  &none  &none                 &none  &kp F1  &kp F2  &kp F3  &kp F10  &kp PRINTSCREEN
-&none  &none             &none     &none      &none       &none                &none      &none                               &none  &none   &none   &none   &none    &kp SCROLLLOCK
-&none  &none             &none     &none      &none              &none  &none  &none      &none  &none  &kp LS(LG(NUMBER_4))         &none   &none   &none   &none    &kp PAUSE_BREAK
+&none  &none             &none     &none      &none       &none  &none                                                 &none          &none  &kp F7  &kp F8  &kp F9  &kp F12  &kp INSERT
+&none  &none             &none     &none      &none       &none  &none                                                 &none          &none  &kp F4  &kp F5  &kp F6  &kp F11  &kp DELETE
+&none  &kp LEFT_COMMAND  &kp LALT  &kp LCTRL  &kp LSHIFT  &none  &none  &none  &none      &kp LG(LS(NUMBER_4))  &none  &none          &none  &kp F1  &kp F2  &kp F3  &kp F10  &kp PRINTSCREEN
+&none  &none             &none     &none      &none       &none                &none      &none                                       &none  &none   &none   &none   &none    &kp SCROLLLOCK
+&none  &none             &none     &none      &none              &none  &none  &none      &none                 &none  &kp LG(SPACE)         &none   &none   &none   &none    &kp PAUSE_BREAK
             >;
         };
 
@@ -283,11 +344,11 @@
 
         WinFN {
             bindings = <
-&none  &none      &none     &none     &none       &none  &none                                          &none          &none  &kp F7            &kp F8            &kp F9            &kp F12  &kp INSERT
-&none  &none      &none     &none     &none       &none  &none                                          &none          &none  &kp F4            &kp F5            &kp F6            &kp F11  &kp DELETE
-&none  &kp LCTRL  &kp LGUI  &kp LALT  &kp LSHIFT  &none  &none  &kp LG(LS(S))  &none      &none  &none  &none          &none  &kp F1            &kp F2            &kp F3            &kp F10  &kp PRINTSCREEN
-&none  &none      &none     &none     &none       &none                        &none      &none                        &none  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &none    &kp SCROLLLOCK
-&none  &none      &none     &none     &none              &none  &none          &none      &none  &none  &kp LA(LS(S))         &kp LG(NUMBER_4)  &kp LG(N5)        &kp LG(NUMBER_6)  &none    &kp PAUSE_BREAK
+&none  &none      &none     &none     &none       &none  &none                                                         &none          &none  &kp F7            &kp F8            &kp F9            &kp F12  &kp INSERT
+&none  &none      &none     &none     &none       &none  &none                                                         &none          &none  &kp F4            &kp F5            &kp F6            &kp F11  &kp DELETE
+&none  &kp LCTRL  &kp LGUI  &kp LALT  &kp LSHIFT  &none  &none  &kp LG(LS(S))  &none      &kp LG(LS(NUMBER_4))  &none  &none          &none  &kp F1            &kp F2            &kp F3            &kp F10  &kp PRINTSCREEN
+&none  &none      &none     &none     &none       &none                        &none      &none                                       &none  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &none    &kp SCROLLLOCK
+&none  &none      &none     &none     &none              &none  &none          &none      &none                 &none  &kp LA(LS(S))         &kp LG(NUMBER_4)  &kp LG(N5)        &kp LG(NUMBER_6)  &none    &kp PAUSE_BREAK
             >;
         };
 
