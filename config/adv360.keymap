@@ -308,6 +308,83 @@
 
             label = "M_ALT_TAB";
         };
+
+        m_extend_word_left: m_extend_word {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LA(LEFT))>;
+            label = "M_EXTEND_WORD";
+        };
+
+        m_extend_word_right: m_extend_word_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LS(RIGHT))>;
+            label = "M_EXTEND_WORD_RIGHT";
+        };
+
+        w_extend_word_left: w_extend_word_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LC(LEFT))>;
+            label = "W_EXTEND_WORD_LEFT";
+        };
+
+        w_extend_word_right: w_extend_word_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(RIGHT))>;
+            label = "W_EXTEND_WORD_RIGHT";
+        };
+
+        m_extend_line_left: m_extend_line_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(UP_ARROW) &kp LS(LG(LEFT))>;
+            label = "M_EXTEND_LINE_LEFT";
+        };
+
+        m_extend_line_right: m_extend_line_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DOWN) &kp LS(LG(RIGHT))>;
+            label = "M_EXTEND_LINE_RIGHT";
+        };
+
+        w_extend_line_left: w_extend_line_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(UP_ARROW) &kp LS(HOME)>;
+            label = "W_EXTEND_LINE_LEFT";
+        };
+
+        w_extend_line_right: w_extend_line_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DOWN) &kp LS(END)>;
+            label = "W_EXTEND_LINE_RIGHT";
+        };
+
+        m_select_line: m_select_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LEFT) &kp LG(LS(RIGHT))>;
+            label = "M_SELECT_LINE";
+        };
+
+        w_select_line: w_select_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kp LS(END)>;
+            label = "W_SELECT_LINE";
+        };
+
+        m_select_word_left: m_select_word_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LEFT)>;
+            label = "M_SELECT_WORD_LEFT";
+        };
     };
 
     keymap {
@@ -325,11 +402,11 @@
 
         MacSymbols {
             bindings = <
-&kp BACKSLASH    &kp GRAVE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON     &kp COMMA      &kp PERCENT                                                 &none          &none        &kp N7        &kp N8        &kp N9        &none          &kp BACKSLASH
-&kp EXCLAMATION  &kp LEFT_BRACE  &kp SINGLE_QUOTE      &kp DOUBLE_QUOTES      &kp RIGHT_BRACE   &kp QUESTION   &kp COLON                                                   &none          &kp PERCENT  &kp N7        &kp N8        &kp N9        &none          &kp TAB
-&kp POUND        &kp CARET       &kp EQUAL             &kp UNDER              &kp DOLLAR        &kp STAR       &kp LC(LEFT)  &none  &none      &kp BACKSLASH  &kp PERCENT  &kp RC(RIGHT)  &kp COLON    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp SEMICOLON  &kp BACKSPACE
-&kp TILDE        &kp LESS_THAN   &kp PIPE              &kp MINUS              &kp GREATER_THAN  &kp KP_DIVIDE                       &none      &kp DOT                                    &kp N0       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH      &none
-&kp AT           &kp AMPERSAND   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PLUS                         &trans        &none  &none      &kp STAR       &kp ENTER    &kp SPACE                   &kp LEFT      &kp DOWN      &kp UP_ARROW  &kp RIGHT      &none
+&kp BACKSLASH    &kp GRAVE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON     &kp COMMA      &kp AT                                                      &none          &none        &kp N7        &kp N8        &kp N9        &none          &kp BACKSLASH
+&kp EXCLAMATION  &kp LEFT_BRACE  &kp SINGLE_QUOTE      &kp DOUBLE_QUOTES      &kp RIGHT_BRACE   &kp QUESTION   &kp PERCENT                                                 &none          &kp AT       &kp N7        &kp N8        &kp N9        &none          &kp TAB
+&kp POUND        &kp CARET       &kp EQUAL             &kp UNDER              &kp DOLLAR        &kp STAR       &kp LC(LEFT)  &none  &none      &kp BACKSLASH  &kp PERCENT  &kp RC(RIGHT)  &kp PERCENT  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp SEMICOLON  &kp BACKSPACE
+&kp COLON        &kp LESS_THAN   &kp PIPE              &kp MINUS              &kp GREATER_THAN  &kp KP_DIVIDE                       &none      &kp DOT                                    &kp N0       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH      &none
+&kp TILDE        &kp AMPERSAND   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PLUS                         &trans        &none  &none      &kp STAR       &kp ENTER    &kp SPACE                   &kp LEFT      &kp DOWN      &kp UP_ARROW  &kp RIGHT      &none
             >;
         };
 
