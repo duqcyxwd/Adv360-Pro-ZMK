@@ -143,6 +143,15 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
         };
+
+        m_select_word_mod: m_select_word_mod {
+            compatible = "zmk,behavior-mod-morph";
+            label = "M_SELECT_WORD_MOD";
+            bindings = <&m_select_word_right>, <&m_select_word_left>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     combos {
@@ -244,6 +253,34 @@
             key-positions = <0 13>;
             timeout-ms = <50>;
             layers = <0>;
+        };
+
+        m_select_word_base {
+            bindings = <&m_select_word_mod>;
+            key-positions = <72 73>;
+            layers = <0 1>;
+            timeout-ms = <50>;
+        };
+
+        m_select_word_nav {
+            bindings = <&m_select_word_mod>;
+            key-positions = <30 32>;
+            timeout-ms = <50>;
+            layers = <2>;
+        };
+
+        m_select_line_base {
+            bindings = <&m_select_line>;
+            key-positions = <71 72 73 74>;
+            timeout-ms = <50>;
+            layers = <0 1>;
+        };
+
+        m_select_line_nav {
+            bindings = <&m_select_line>;
+            key-positions = <30 31 32>;
+            timeout-ms = <50>;
+            layers = <2>;
         };
     };
 
@@ -382,8 +419,29 @@
         m_select_word_left: m_select_word_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LEFT)>;
+            bindings = <&kp LA(LEFT) &kp LA(RIGHT) &kp LS(LA(LEFT))>;
             label = "M_SELECT_WORD_LEFT";
+        };
+
+        m_select_word_right: m_select_word_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(RIGHT) &kp LA(LEFT) &kp LA(LS(RIGHT))>;
+            label = "M_SELECT_WORD_RIGHT";
+        };
+
+        w_select_word_left: w_select_word_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LEFT) &kp LC(RIGHT) &kp LC(LS(LEFT))>;
+            label = "W_SELECT_WORD_LEFT";
+        };
+
+        w_select_word_right: w_select_word_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(RIGHT) &kp LC(LEFT) &kp LC(LS(RIGHT))>;
+            label = "W_SELECT_WORD_RIGHT";
         };
     };
 
@@ -412,11 +470,11 @@
 
         MacNavigation {
             bindings = <
-&none      &none            &none         &none         &none          &none          &none                                               &none          &none  &none              &none       &none      &none      &none
-&none      &none            &kp LG(LEFT)  &kp UP_ARROW  &kp LG(RIGHT)  &kp PAGE_UP    &none                                               &none          &none  &kp RG(RS(G))      &kp RG(F)   &kp RG(G)  &none      &none
-&none      &kp LSHIFT       &kp LEFT      &kp DOWN      &kp RIGHT      &kp PAGE_DOWN  &kp LC(LEFT)   &none       &none      &none  &none  &kp RC(RIGHT)  &none  &kp RIGHT_COMMAND  &kp RSHIFT  &kp RALT   &kp RCTRL  &none
-&kp LG(W)  &kp LC(LS(TAB))  &kp LG(L)     &kp LG(T)     &kp LC(TAB)    &none                                     &none      &none                        &none  &none              &none       &none      &none      &none
-&none      &none            &kp LG(Z)     &kp LG(C)     &kp LG(V)                     &kp BACKSPACE  &kp DELETE  &none      &none  &none  &none                 &none              &none       &none      &none      &none
+&none      &none            &none        &none         &none          &none          &none                                               &none          &none  &none          &none       &none          &none      &none
+&none      &none            &kp PAGE_UP  &kp UP_ARROW  &kp PAGE_DOWN  &none          &none                                               &none          &none  &kp RG(RS(G))  &kp RG(F)   &kp RG(G)      &none      &none
+&none      &kp LG(LEFT)     &kp LEFT     &kp DOWN      &kp RIGHT      &kp LG(RIGHT)  &kp LC(LEFT)   &none       &none      &none  &none  &kp RC(RIGHT)  &none  &kp RALT       &kp RSHIFT  &kp RIGHT_GUI  &kp RCTRL  &none
+&kp LG(W)  &kp LC(LS(TAB))  &kp LG(L)    &kp LG(T)     &kp LC(TAB)    &none                                     &none      &none                        &none  &none          &none       &none          &none      &none
+&none      &none            &kp LG(Z)    &kp LG(C)     &kp LG(V)                     &kp BACKSPACE  &kp DELETE  &none      &none  &none  &none                 &none          &none       &none          &none      &none
             >;
         };
 
