@@ -551,6 +551,20 @@
             bindings = <&kp HOME &kp LS(END) &kp BACKSPACE>;
             label = "W_DELETE_LINE";
         };
+
+        m_bt_profile: m_bt_profile {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 0 &bt BT_SEL 0>;
+            label = "M_BT_PROFILE";
+        };
+
+        w_bt_profile: w_bt_profile {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 4 &bt BT_SEL 1>;
+            label = "W_BT_PROFILE";
+        };
     };
 
     keymap {
@@ -648,11 +662,11 @@
 
         Mod {
             bindings = <
-&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans                  &none  &none                 &none                 &none       &none  &none
-&none  &none         &none         &none         &none         &none         &bootloader                                            &bootloader             &none  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none       &none  &none
-&none  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none  &kp K_PREV            &kp K_PLAY_PAUSE      &kp K_NEXT  &none  &none
-&none  &none         &none         &none         &macro_ver    &none                             &none      &none                                           &none  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp K_MUTE  &none  &none
-&none  &none         &none         &none         &none                       &to 0        &to 4  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                &bl BL_INC            &bl BL_DEC            &none       &none  &none
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                                  &trans                  &none  &none                 &none                 &none       &none  &none
+&none  &none         &none         &none         &none         &none         &bootloader                                                            &bootloader             &none  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none       &none  &none
+&none  &none         &none         &none         &none         &none         &none        &m_bt_profile  &w_bt_profile      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none  &kp K_PREV            &kp K_PLAY_PAUSE      &kp K_NEXT  &none  &none
+&none  &none         &none         &none         &macro_ver    &none                                     &none              &none                                           &none  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp K_MUTE  &none  &none
+&none  &none         &none         &none         &none                       &to 0        &to 4          &none              &none       &bl BL_TOG  &rgb_ug RGB_TOG                &bl BL_INC            &bl BL_DEC            &none       &none  &none
             >;
         };
     };
