@@ -364,7 +364,7 @@
         };
 
         m_next_lang {
-            bindings = <&kp C_AC_NEXT_KEYBOARD_LAYOUT_SELECT>;
+            bindings = <&m_next_lang>;
             key-positions = <60 61>;
             timeout-ms = <50>;
             layers = <0>;
@@ -564,6 +564,13 @@
             #binding-cells = <0>;
             bindings = <&to 4 &bt BT_SEL 1>;
             label = "W_BT_PROFILE";
+        };
+
+        m_next_lang: m_next_lang {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp LALT &kp SPACE>;
+            label = "M_NEXT_LANG";
         };
     };
 
