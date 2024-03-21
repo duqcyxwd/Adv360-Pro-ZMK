@@ -289,18 +289,21 @@
             bindings = <&kp LA(BACKSPACE)>;
             key-positions = <50 65>;
             timeout-ms = <50>;
+            layers = <0 2>;
         };
 
         m_delete_word_forward {
             bindings = <&kp LA(DELETE)>;
             key-positions = <50 66>;
             timeout-ms = <50>;
+            layers = <0 2>;
         };
 
         m_delete_line {
             bindings = <&m_delete_line>;
             key-positions = <49 50 65>;
             timeout-ms = <50>;
+            layers = <0 2>;
         };
 
         w_paste_plain {
@@ -602,11 +605,11 @@
 
         MacNavigation {
             bindings = <
-&none      &none            &none         &none         &none          &none              &none                                               &none          &none  &none          &none       &none          &none      &none
-&none      &none            &kp LG(LEFT)  &kp UP_ARROW  &kp RG(RIGHT)  &kp PAGE_UP        &none                                               &none          &none  &kp RG(RS(G))  &kp RG(F)   &kp RG(G)      &none      &none
-&none      &none            &kp LEFT      &kp DOWN      &kp RIGHT      &kp LG(PAGE_DOWN)  &kp LC(LEFT)   &none       &none      &none  &none  &kp RC(RIGHT)  &none  &kp RALT       &kp RSHIFT  &kp RIGHT_GUI  &kp RCTRL  &kp ENTER
-&kp LG(W)  &kp LC(LS(TAB))  &kp LG(L)     &kp LG(T)     &kp LC(TAB)    &none                                         &none      &none                        &none  &none          &none       &none          &none      &none
-&none      &none            &kp LG(Z)     &kp LG(C)     &kp LG(V)                         &kp BACKSPACE  &kp DELETE  &none      &none  &none  &none                 &none          &none       &none          &none      &none
+&none      &none            &none         &none         &none          &none          &none                                               &none          &none  &none          &none       &none          &none      &none
+&none      &none            &kp LG(LEFT)  &kp UP_ARROW  &kp RG(RIGHT)  &kp PAGE_UP    &none                                               &none          &none  &kp RG(RS(G))  &kp RG(F)   &kp RG(G)      &none      &none
+&none      &none            &kp LEFT      &kp DOWN      &kp RIGHT      &kp PAGE_DOWN  &kp LC(LEFT)   &none       &none      &none  &none  &kp RC(RIGHT)  &none  &kp RALT       &kp RSHIFT  &kp RIGHT_GUI  &kp RCTRL  &kp ENTER
+&kp LG(W)  &kp LC(LS(TAB))  &kp LG(L)     &kp LG(T)     &kp LC(TAB)    &none                                     &none      &none                        &none  &none          &none       &none          &none      &none
+&none      &none            &kp LG(Z)     &kp LG(C)     &kp LG(V)                     &kp BACKSPACE  &kp DELETE  &none      &none  &none  &none                 &none          &none       &none          &none      &none
             >;
         };
 
@@ -634,7 +637,7 @@
             bindings = <
 &kp BACKSLASH  &kp GRAVE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON     &kp COMMA     &kp AT                                                             &trans           &kp AT     &kp N7        &kp N8        &kp N9        &none          &kp BACKSLASH
 &kp EXCL       &kp LEFT_BRACE  &kp SINGLE_QUOTE      &kp DOUBLE_QUOTES      &kp RIGHT_BRACE   &kp QUESTION  &kp PERCENT                                                        &kp PERCENT      &kp COMMA  &kp N7        &kp N8        &kp N9        &none          &kp TAB
-&kp HASH       &kp CARET       &kp KP_EQUAL          &kp UNDERSCORE         &kp DOLLAR        &kp ASTERISK  &kp KP_MULTIPLY  &trans  &trans        &kp BACKSLASH  &kp PERCENT  &kp KP_MULTIPLY  &kp DOT    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp SEMICOLON  &kp BACKSPACE
+&kp HASH       &kp CARET       &kp EQUAL             &kp UNDERSCORE         &kp DOLLAR        &kp ASTERISK  &kp KP_MULTIPLY  &trans  &trans        &kp BACKSLASH  &kp PERCENT  &kp KP_MULTIPLY  &kp DOT    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp SEMICOLON  &kp BACKSPACE
 &kp COLON      &kp LESS_THAN   &kp PIPE              &kp MINUS              &kp GREATER_THAN  &kp SLASH                              &kp HOME      &none                                        &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH      &none
 &kp TILDE      &kp AMPERSAND   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp KP_PLUS                     &kp SPACE        &trans  &kp END       &kp AT         &kp ENTER    &space 6 SPACE              &kp LEFT      &kp DOWN      &kp UP_ARROW  &kp RIGHT      &none
             >;
