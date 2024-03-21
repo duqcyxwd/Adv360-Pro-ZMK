@@ -589,21 +589,21 @@
 
         MacSymbols {
             bindings = <
-&kp BACKSLASH    &kp GRAVE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON     &kp COMMA      &kp AT                                                      &none          &kp AT     &kp N7        &kp N8        &kp N9        &none          &kp BACKSLASH
-&kp EXCLAMATION  &kp LEFT_BRACE  &kp SINGLE_QUOTE      &kp DOUBLE_QUOTES      &kp RIGHT_BRACE   &kp QUESTION   &kp PERCENT                                                 &none          &kp COMMA  &kp N7        &kp N8        &kp N9        &none          &kp TAB
-&kp POUND        &kp CARET       &kp EQUAL             &kp UNDER              &kp DOLLAR        &kp STAR       &kp LC(LEFT)  &none  &none      &kp BACKSLASH  &kp PERCENT  &kp RC(RIGHT)  &kp DOT    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp SEMICOLON  &kp BACKSPACE
-&kp COLON        &kp LESS_THAN   &kp PIPE              &kp MINUS              &kp GREATER_THAN  &kp KP_DIVIDE                       &none      &none                                      &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH      &none
-&kp TILDE        &kp AMPERSAND   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PLUS                         &trans        &none  &none      &kp AT         &kp ENTER    &kp SPACE                 &kp LEFT      &kp DOWN      &kp UP_ARROW  &kp RIGHT      &none
+&kp BACKSLASH    &kp GRAVE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON     &kp COMMA      &kp AT                                                      &none           &kp AT     &kp N7        &kp N8        &kp N9        &none          &kp BACKSLASH
+&kp EXCLAMATION  &kp LEFT_BRACE  &kp SINGLE_QUOTE      &kp DOUBLE_QUOTES      &kp RIGHT_BRACE   &kp QUESTION   &kp PERCENT                                                 &none           &kp COMMA  &kp N7        &kp N8        &kp N9        &none          &kp TAB
+&kp POUND        &kp CARET       &kp EQUAL             &kp UNDER              &kp DOLLAR        &kp STAR       &kp LC(LEFT)  &none  &none      &kp BACKSLASH  &kp PERCENT  &kp RC(RIGHT)   &kp DOT    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp SEMICOLON  &kp BACKSPACE
+&kp COLON        &kp LESS_THAN   &kp PIPE              &kp MINUS              &kp GREATER_THAN  &kp KP_DIVIDE                       &none      &none                                       &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH      &none
+&kp TILDE        &kp AMPERSAND   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PLUS                         &trans        &none  &none      &kp AT         &kp ENTER    &space 2 SPACE             &kp LEFT      &kp DOWN      &kp UP_ARROW  &kp RIGHT      &none
             >;
         };
 
         MacNavigation {
             bindings = <
-&none      &none            &none         &none         &none          &none              &none                                               &none          &none  &none          &none       &none          &none      &none
-&none      &none            &kp LG(LEFT)  &kp UP_ARROW  &kp RG(RIGHT)  &kp PAGE_UP        &none                                               &none          &none  &kp RG(RS(G))  &kp RG(F)   &kp RG(G)      &none      &none
-&none      &kp LG(LEFT)     &kp LEFT      &kp DOWN      &kp RIGHT      &kp LG(PAGE_DOWN)  &kp LC(LEFT)   &none       &none      &none  &none  &kp RC(RIGHT)  &none  &kp RALT       &kp RSHIFT  &kp RIGHT_GUI  &kp RCTRL  &kp ENTER
-&kp LG(W)  &kp LC(LS(TAB))  &kp LG(L)     &kp LG(T)     &kp LC(TAB)    &none                                         &none      &none                        &none  &none          &none       &none          &none      &none
-&none      &none            &kp LG(Z)     &kp LG(C)     &kp LG(V)                         &kp BACKSPACE  &kp DELETE  &none      &none  &none  &none                 &none          &none       &none          &none      &none
+&none      &none            &none         &none         &none          &none              &none                                                    &none          &none  &none          &none       &none          &none      &none
+&none      &none            &kp LG(LEFT)  &kp UP_ARROW  &kp RG(RIGHT)  &kp PAGE_UP        &none                                                    &none          &none  &kp RG(RS(G))  &kp RG(F)   &kp RG(G)      &none      &none
+&none      &kp LG(LEFT)     &kp LEFT      &kp DOWN      &kp RIGHT      &kp LG(PAGE_DOWN)  &kp LC(LEFT)        &none       &none      &none  &none  &kp RC(RIGHT)  &none  &kp RALT       &kp RSHIFT  &kp RIGHT_GUI  &kp RCTRL  &kp ENTER
+&kp LG(W)  &kp LC(LS(TAB))  &kp LG(L)     &kp LG(T)     &kp LC(TAB)    &none                                              &none      &none                        &none  &none          &none       &none          &none      &none
+&none      &none            &kp LG(Z)     &kp LG(C)     &kp LG(V)                         &thumb 1 BACKSPACE  &kp DELETE  &none      &none  &none  &none                 &none          &none       &none          &none      &none
             >;
         };
 
