@@ -382,6 +382,13 @@
             timeout-ms = <50>;
             layers = <4>;
         };
+
+        w_delete_line_easy {
+            bindings = <&w_delete_line>;
+            key-positions = <49 65>;
+            timeout-ms = <50>;
+            layers = <4 6>;
+        };
     };
 
     macros {
