@@ -162,11 +162,18 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        w_select_line_all: w_select_line_all {
+            compatible = "zmk,behavior-tap-dance";
+            label = "W_SELECT_LINE_ALL";
+            #binding-cells = <0>;
+            bindings = <&w_select_line>, <&kp LC(A)>;
+        };
+
         m_select_line_all: m_select_line_all {
             compatible = "zmk,behavior-tap-dance";
             label = "M_SELECT_LINE_ALL";
             #binding-cells = <0>;
-            bindings = <&w_select_line>, <&kp LC(A)>;
+            bindings = <&m_select_line>, <&kp LG(A)>;
         };
     };
 
@@ -626,11 +633,11 @@
 
         MacNavigation {
             bindings = <
-&none      &none            &none         &none         &none          &none          &none                                               &none          &none  &none          &none       &none          &none      &none
-&none      &none            &kp LG(LEFT)  &kp UP_ARROW  &kp RG(RIGHT)  &kp PAGE_UP    &none                                               &none          &none  &kp RG(RS(G))  &kp RG(F)   &kp RG(G)      &none      &none
-&none      &none            &kp LEFT      &kp DOWN      &kp RIGHT      &kp PAGE_DOWN  &kp LC(LEFT)   &none       &none      &none  &none  &kp RC(RIGHT)  &none  &kp RALT       &kp RSHIFT  &kp RIGHT_GUI  &kp RCTRL  &kp ENTER
-&kp LG(W)  &kp LC(LS(TAB))  &kp LG(L)     &kp LG(T)     &kp LC(TAB)    &none                                     &none      &none                        &none  &none          &none       &none          &none      &none
-&none      &none            &kp LG(Z)     &kp LG(C)     &kp LG(V)                     &kp BACKSPACE  &kp DELETE  &none      &none  &none  &none                 &none          &none       &none          &none      &none
+&none      &none               &none         &none         &none          &none          &none                                               &none          &none  &none          &none       &none          &none      &none
+&none      &none               &kp LG(LEFT)  &kp UP_ARROW  &kp RG(RIGHT)  &kp PAGE_UP    &none                                               &none          &none  &kp RG(RS(G))  &kp RG(F)   &kp RG(G)      &none      &none
+&none      &m_select_line_all  &kp LEFT      &kp DOWN      &kp RIGHT      &kp PAGE_DOWN  &kp LC(LEFT)   &none       &none      &none  &none  &kp RC(RIGHT)  &none  &kp RALT       &kp RSHIFT  &kp RIGHT_GUI  &kp RCTRL  &kp ENTER
+&kp LG(W)  &kp LC(LS(TAB))     &kp LG(L)     &kp LG(T)     &kp LC(TAB)    &none                                     &none      &none                        &none  &none          &none       &none          &none      &none
+&none      &none               &kp LG(Z)     &kp LG(C)     &kp LG(V)                     &kp BACKSPACE  &kp DELETE  &none      &none  &none  &none                 &none          &none       &none          &none      &none
             >;
         };
 
@@ -668,7 +675,7 @@
             bindings = <
 &none      &none               &none      &none         &none        &none          &none                                               &none  &none  &none             &none             &none             &none             &none
 &none      &none               &kp HOME   &kp UP_ARROW  &kp END      &kp PAGE_UP    &none                                               &none  &none  &kp RS(F3)        &kp RC(F)         &kp F3            &none             &none
-&none      &m_select_line_all  &kp LEFT   &kp DOWN      &kp RIGHT    &kp PAGE_DOWN  &none          &none       &none      &none  &none  &none  &none  &kp RCTRL         &kp RSHIFT        &kp RALT          &kp RGUI          &kp ENTER
+&none      &w_select_line_all  &kp LEFT   &kp DOWN      &kp RIGHT    &kp PAGE_DOWN  &none          &none       &none      &none  &none  &none  &none  &kp RCTRL         &kp RSHIFT        &kp RALT          &kp RGUI          &kp ENTER
 &kp LC(W)  &kp LC(LS(TAB))     &kp LC(L)  &kp LC(T)     &kp LC(TAB)  &none                                     &none      &none                &none  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &none
 &none      &none               &kp LC(Z)  &kp LC(C)     &kp LC(V)                   &kp BACKSPACE  &kp DELETE  &none      &none  &none  &none         &kp LG(N5)        &kp LG(NUMBER_6)  &kp LG(N7)        &kp LG(N8)        &none
             >;
