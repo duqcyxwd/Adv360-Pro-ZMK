@@ -161,6 +161,13 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        m_select_line_all: m_select_line_all {
+            compatible = "zmk,behavior-tap-dance";
+            label = "M_SELECT_LINE_ALL";
+            #binding-cells = <0>;
+            bindings = <&w_select_line>, <&kp LC(A)>;
+        };
     };
 
     combos {
@@ -386,6 +393,13 @@
         w_delete_line_easy {
             bindings = <&w_delete_line>;
             key-positions = <49 65>;
+            timeout-ms = <50>;
+            layers = <4 6>;
+        };
+
+        w_cut {
+            bindings = <&kp LC(X)>;
+            key-positions = <62 63>;
             timeout-ms = <50>;
             layers = <4 6>;
         };
@@ -652,11 +666,11 @@
 
         WinNavigation {
             bindings = <
-&none      &none            &none        &none         &none          &none    &none                                               &none  &none  &none             &none             &none             &none             &none
-&none      &none            &kp PAGE_UP  &kp UP_ARROW  &kp PAGE_DOWN  &none    &none                                               &none  &none  &kp RS(F3)        &kp RC(F)         &kp F3            &none             &none
-&none      &kp HOME         &kp LEFT     &kp DOWN      &kp RIGHT      &kp END  &none          &none       &none      &none  &none  &none  &none  &kp RCTRL         &kp RSHIFT        &kp RALT          &kp RGUI          &kp ENTER
-&kp LC(W)  &kp LC(LS(TAB))  &kp LC(L)    &kp LC(T)     &kp LC(TAB)    &none                               &none      &none                &none  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &none
-&none      &none            &none        &none         &none                   &kp BACKSPACE  &kp DELETE  &none      &none  &none  &none         &kp LG(N5)        &kp LG(NUMBER_6)  &kp LG(N7)        &kp LG(N8)        &none
+&none      &none               &none      &none         &none        &none          &none                                               &none  &none  &none             &none             &none             &none             &none
+&none      &none               &kp HOME   &kp UP_ARROW  &kp END      &kp PAGE_UP    &none                                               &none  &none  &kp RS(F3)        &kp RC(F)         &kp F3            &none             &none
+&none      &m_select_line_all  &kp LEFT   &kp DOWN      &kp RIGHT    &kp PAGE_DOWN  &none          &none       &none      &none  &none  &none  &none  &kp RCTRL         &kp RSHIFT        &kp RALT          &kp RGUI          &kp ENTER
+&kp LC(W)  &kp LC(LS(TAB))     &kp LC(L)  &kp LC(T)     &kp LC(TAB)  &none                                     &none      &none                &none  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &none
+&none      &none               &kp LC(Z)  &kp LC(C)     &kp LC(V)                   &kp BACKSPACE  &kp DELETE  &none      &none  &none  &none         &kp LG(N5)        &kp LG(NUMBER_6)  &kp LG(N7)        &kp LG(N8)        &none
             >;
         };
 
