@@ -351,7 +351,7 @@
         w_select_line_nav {
             bindings = <&w_select_line>;
             key-positions = <30 31 32>;
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             layers = <6>;
         };
 
