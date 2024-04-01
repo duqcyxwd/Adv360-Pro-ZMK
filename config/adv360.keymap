@@ -640,6 +640,7 @@
                 <&mo 2>;
 
             label = "M_FROM_NAV_TO_SYM";
+            wait-ms = <5>;
         };
     };
 
@@ -652,7 +653,7 @@
 &kp TAB                 &kp Q         &kp W        &kp E          &kp R        &kp T   &none                                                                                    &none                 &kp Y   &kp U        &kp I          &kp O             &kp P                 &kp BSLH
 &kp ESCAPE              &hml LCTRL A  &hml LALT S  &hml LSHIFT D  &hml LGUI F  &kp G   &kp LS(LA(LC(LGUI)))  &kp LA(ESCAPE)   &kp LALT      &kp LGUI   &kp RCTRL                &kp RS(RA(RC(RGUI)))  &kp H   &hmr RGUI J  &hmr RSHIFT K  &hmr RIGHT_ALT L  &hmr RCTRL SEMICOLON  &kp SQT
 &kp LSHFT               &kp Z         &kp X        &kp C          &kp V        &kp B                                          &kp HOME      &kp PG_UP                                                 &kp N   &kp M        &kp COMMA      &kp DOT           &kp FSLH              &caps_word
-&layer_with_mod 8 LGUI  &caps_word    &kp LG(Z)    &kp LG(C)      &kp LG(V)            &thumb 1 BACKSPACE    &thumb 3 DELETE  &kp END       &kp PG_DN  &thumb_mod RSHIFT ENTER  &space 2 SPACE                &kp LEFT     &kp DOWN       &kp UP_ARROW      &kp RIGHT             &layer_with_mod 8 RGUI
+&layer_with_mod 8 LGUI  &kp LG(Z)     &kp LG(X)    &kp LG(C)      &kp LG(V)            &thumb 1 BACKSPACE    &thumb 3 DELETE  &kp END       &kp PG_DN  &thumb_mod RSHIFT ENTER  &space 2 SPACE                &kp LEFT     &kp DOWN       &kp UP_ARROW      &kp RIGHT             &layer_with_mod 8 RGUI
             >;
         };
 
@@ -668,11 +669,11 @@
 
         MacNavigation {
             bindings = <
-&none      &none               &none         &none         &none          &none          &none                                                                          &none          &none  &none          &none       &none          &none      &none
-&none      &none               &kp LG(LEFT)  &kp UP_ARROW  &kp RG(RIGHT)  &kp PAGE_UP    &none                                                                          &none          &none  &kp RG(RS(G))  &kp RG(F)   &kp RG(G)      &none      &none
-&none      &m_select_line_all  &kp LEFT      &kp DOWN      &kp RIGHT      &kp PAGE_DOWN  &kp LC(LEFT)                              &none       &none      &none  &none  &kp RC(RIGHT)  &none  &kp RALT       &kp RSHIFT  &kp RIGHT_GUI  &kp RCTRL  &kp ENTER
-&kp LG(W)  &kp LC(LS(TAB))     &kp LG(L)     &kp LG(T)     &kp LC(TAB)    &none                                                                &none      &none                        &none  &none          &none       &none          &none      &none
-&none      &none               &kp LG(Z)     &kp LG(C)     &kp LG(V)                     &m_nav_to_sym_macro_behavior 0 BACKSPACE  &kp DELETE  &none      &none  &none  &none                 &none          &none       &none          &none      &none
+&to 0      &none               &none         &none         &none          &none          &none                                                                          &none           &none  &none          &none       &none          &none      &none
+&none      &none               &kp LG(LEFT)  &kp UP_ARROW  &kp RG(RIGHT)  &kp PAGE_UP    &none                                                                          &none           &none  &kp RG(RS(G))  &kp RG(F)   &kp RG(G)      &none      &none
+&none      &m_select_line_all  &kp LEFT      &kp DOWN      &kp RIGHT      &kp PAGE_DOWN  &kp LC(LEFT)                              &none       &none      &none  &none  &kp RC(RIGHT)   &none  &kp RALT       &kp RSHIFT  &kp RIGHT_GUI  &kp RCTRL  &kp ENTER
+&kp LG(W)  &kp LC(LS(TAB))     &kp LG(L)     &kp LG(T)     &kp LC(TAB)    &none                                                                &none      &none                         &none  &none          &none       &none          &none      &none
+&none      &kp LG(Z)           &kp LG(X)     &kp LG(C)     &kp LG(V)                     &m_nav_to_sym_macro_behavior 0 BACKSPACE  &kp DELETE  &none      &none  &none  &space 2 SPACE         &none          &none       &none          &none      &none
             >;
         };
 
