@@ -184,6 +184,15 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        m_nav_to_sym_macro_behavior: m_nav_to_sym_macro_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            label = "M_NAV_TO_SYM_MACRO_BEHAVIOR";
+            bindings = <&m_from_nav_to_sym>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     combos {
@@ -615,6 +624,14 @@
             bindings = <&kp LCTRL &kp LALT &kp SPACE>;
             label = "M_NEXT_LANG";
         };
+
+        m_from_nav_to_sym: m_from_nav_to_sym {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_release>, <&mo 2>, <&macro_press>, <&mo 1>;
+
+            label = "M_FROM_NAV_TO_SYM";
+        };
     };
 
     keymap {
@@ -642,11 +659,11 @@
 
         MacNavigation {
             bindings = <
-&none      &none               &none         &none         &none          &none          &none                                                    &none          &none  &none          &none       &none          &none      &none
-&none      &none               &kp LG(LEFT)  &kp UP_ARROW  &kp RG(RIGHT)  &kp PAGE_UP    &none                                                    &none          &none  &kp RG(RS(G))  &kp RG(F)   &kp RG(G)      &none      &none
-&none      &m_select_line_all  &kp LEFT      &kp DOWN      &kp RIGHT      &kp PAGE_DOWN  &kp LC(LEFT)        &none       &none      &none  &none  &kp RC(RIGHT)  &none  &kp RALT       &kp RSHIFT  &kp RIGHT_GUI  &kp RCTRL  &kp ENTER
-&kp LG(W)  &kp LC(LS(TAB))     &kp LG(L)     &kp LG(T)     &kp LC(TAB)    &none                                          &none      &none                        &none  &none          &none       &none          &none      &none
-&none      &none               &kp LG(Z)     &kp LG(C)     &kp LG(V)                     &thumb 4 BACKSPACE  &kp DELETE  &none      &none  &none  &none                 &none          &none       &none          &none      &none
+&none      &none               &none         &none         &none          &none          &none                                                                          &none          &none  &none          &none       &none          &none      &none
+&none      &none               &kp LG(LEFT)  &kp UP_ARROW  &kp RG(RIGHT)  &kp PAGE_UP    &none                                                                          &none          &none  &kp RG(RS(G))  &kp RG(F)   &kp RG(G)      &none      &none
+&none      &m_select_line_all  &kp LEFT      &kp DOWN      &kp RIGHT      &kp PAGE_DOWN  &kp LC(LEFT)                              &none       &none      &none  &none  &kp RC(RIGHT)  &none  &kp RALT       &kp RSHIFT  &kp RIGHT_GUI  &kp RCTRL  &kp ENTER
+&kp LG(W)  &kp LC(LS(TAB))     &kp LG(L)     &kp LG(T)     &kp LC(TAB)    &none                                                                &none      &none                        &none  &none          &none       &none          &none      &none
+&none      &none               &kp LG(Z)     &kp LG(C)     &kp LG(V)                     &m_nav_to_sym_macro_behavior 0 BACKSPACE  &kp DELETE  &none      &none  &none  &none                 &none          &none       &none          &none      &none
             >;
         };
 
@@ -741,12 +758,5 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        mac_symbols_nav {
-            if-layers = <2 4>;
-            then-layer = <1>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
