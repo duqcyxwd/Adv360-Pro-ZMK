@@ -84,7 +84,6 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
         };
 
         M_UndoRedo: M_UndoRedo {
@@ -141,7 +140,6 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
         };
 
         m_select_word_mod: m_select_word_mod {
@@ -386,6 +384,13 @@
             timeout-ms = <50>;
             layers = <4 6>;
         };
+
+        backspace_repeat {
+            bindings = <&backspace_repeat>;
+            key-positions = <46 65>;
+            layers = <0 2 4 6>;
+            timeout-ms = <50>;
+        };
     };
 
     macros {
@@ -599,6 +604,19 @@
 
             label = "M_FROM_NAV_TO_SYM";
             wait-ms = <5>;
+        };
+
+        backspace_repeat: backspace_repeat {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp BACKSPACE &key_repeat>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp BACKSPACE>;
+
+            label = "BACKSPACE_REPEAT";
         };
     };
 
