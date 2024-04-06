@@ -459,6 +459,20 @@
             timeout-ms = <50>;
             layers = <0 4>;
         };
+
+        m_lshift_lgui_enter {
+            bindings = <&kp LG(LS(ENTER))>;
+            key-positions = <32 31 69>;
+            timeout-ms = <50>;
+            layers = <0 4>;
+        };
+
+        w_lshift_lctrl_enter {
+            bindings = <&kp LC(LS(ENTER))>;
+            key-positions = <32 31 69>;
+            timeout-ms = <50>;
+            layers = <6 10>;
+        };
     };
 
     macros {
@@ -840,11 +854,11 @@
 
         WinSymbols {
             bindings = <
-&kp BACKSLASH  &kp GRAVE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON     &kp COMMA     &kp AT                                                       &none            &none  &none         &none         &none         &none          &kp BACKSLASH
-&kp EXCL       &kp LEFT_BRACE  &kp SINGLE_QUOTE      &kp DOUBLE_QUOTES      &kp RIGHT_BRACE   &kp QUESTION  &kp AT                                                       &none            &none  &kp N7        &kp N8        &kp N9        &none          &kp TAB
-&kp HASH       &kp CARET       &kp EQUAL             &kp UNDERSCORE         &kp DOLLAR        &kp ASTERISK  &kp PERCENT  &trans  &trans        &kp BACKSLASH  &kp N0     &none            &none  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp SEMICOLON  &kp BACKSPACE
-&kp COLON      &kp LESS_THAN   &kp PIPE              &kp MINUS              &kp GREATER_THAN  &kp SLASH                          &kp HOME      &kp DOT                                    &none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH      &none
-&kp TILDE      &kp AMPERSAND   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp KP_PLUS                     &kp SPACE    &trans  &kp END       &kp COMMA      &kp ENTER  &space 10 SPACE         &kp LEFT      &kp DOWN      &kp UP_ARROW  &kp RIGHT      &none
+&kp GRAVE  &kp GRAVE        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS   &kp SEMICOLON      &kp COMMA     &none                                                        &none            &none  &none                &none           &none               &none                 &kp BACKSLASH
+&kp EXCL   &kp LEFT_BRACE   &kp SINGLE_QUOTE      &kp DOUBLE_QUOTES       &kp RIGHT_BRACE    &kp QUESTION  &kp AT                                                       &none            &none  &kp N7               &kp N8          &kp N9              &none                 &kp TAB
+&kp HASH   &hml LGUI CARET  &hml LALT EQUAL       &hml LSHIFT UNDERSCORE  &hml LCTRL DOLLAR  &kp ASTERISK  &kp PERCENT  &trans  &trans        &kp BACKSLASH  &kp N0     &none            &none  &hmr RCTRL NUMBER_4  &hmr RSHIFT N5  &hmr RALT NUMBER_6  &hmr RCTRL SEMICOLON  &kp BACKSPACE
+&kp COLON  &kp LESS_THAN    &kp PIPE              &kp MINUS               &kp GREATER_THAN   &kp SLASH                          &kp HOME      &kp DOT                                    &none  &kp NUMBER_1         &kp NUMBER_2    &kp NUMBER_3        &kp SLASH             &none
+&kp TILDE  &kp AMPERSAND    &kp LEFT_BRACKET      &kp RIGHT_BRACKET       &kp KP_PLUS                      &kp SPACE    &trans  &kp END       &kp COMMA      &kp ENTER  &space 10 SPACE         &kp LEFT             &kp DOWN        &kp UP_ARROW        &kp RIGHT             &none
             >;
         };
 
