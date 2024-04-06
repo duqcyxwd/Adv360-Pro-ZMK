@@ -426,7 +426,7 @@
         };
 
         esc_combo {
-            bindings = <&kp ESCAPE>;
+            bindings = <&kp ENTER>;
             key-positions = <30 29>;
             layers = <0 2 4>;
             timeout-ms = <50>;
