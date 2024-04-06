@@ -438,6 +438,27 @@
             layers = <0 4>;
             timeout-ms = <50>;
         };
+
+        m_command_space {
+            bindings = <&kp LG(SPACE)>;
+            key-positions = <32 70>;
+            timeout-ms = <50>;
+            layers = <0 4>;
+        };
+
+        w_ctrl_space {
+            bindings = <&kp LC(SPACE)>;
+            key-positions = <32 70>;
+            timeout-ms = <50>;
+            layers = <6 10>;
+        };
+
+        m_lalt_lgui_space {
+            bindings = <&kp LG(LA(SPACE))>;
+            key-positions = <32 30 70>;
+            timeout-ms = <50>;
+            layers = <0 4>;
+        };
     };
 
     macros {
