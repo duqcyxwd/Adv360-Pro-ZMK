@@ -440,10 +440,10 @@
         };
 
         esc {
-            bindings = <&kp ESCAPE>;
+            bindings = <&kp ESC>;
             key-positions = <29 30>;
-            timeout-ms = <45>;
-            layers = <0 2 4 6 8 10>;
+            timeout-ms = <50>;
+            layers = <0 2 4 6 8 10 1 7>;
         };
     };
 
