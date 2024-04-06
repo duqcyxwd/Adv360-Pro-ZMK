@@ -425,11 +425,11 @@
             layers = <0 4 6 10>;
         };
 
-        esc {
-            bindings = <&kp ESC>;
-            key-positions = <29 30>;
+        esc_combo {
+            bindings = <&kp ESCAPE>;
+            key-positions = <30 29>;
+            layers = <0 2 4>;
             timeout-ms = <50>;
-            layers = <0 2 4 6 8 10 1 7>;
         };
     };
 
