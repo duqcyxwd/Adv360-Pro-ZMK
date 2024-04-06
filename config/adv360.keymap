@@ -317,14 +317,14 @@
 
         m_delete_word_backward {
             bindings = <&kp LA(BACKSPACE)>;
-            key-positions = <65 30>;
+            key-positions = <65 32>;
             timeout-ms = <50>;
             layers = <0 4>;
         };
 
         m_delete_word_forward {
             bindings = <&kp LA(DELETE)>;
-            key-positions = <66 30>;
+            key-positions = <66 32>;
             timeout-ms = <50>;
             layers = <0 4>;
         };
@@ -366,14 +366,14 @@
 
         w_delete_word_backward {
             bindings = <&kp LC(BACKSPACE)>;
-            key-positions = <65 30>;
+            key-positions = <65 32>;
             timeout-ms = <50>;
             layers = <6 10>;
         };
 
         w_delete_word_forward {
             bindings = <&kp LC(DELETE)>;
-            key-positions = <66 30>;
+            key-positions = <66 32>;
             timeout-ms = <50>;
             layers = <6 10>;
         };
@@ -426,9 +426,16 @@
         };
 
         esc_combo {
-            bindings = <&kp ENTER>;
+            bindings = <&kp ESC>;
             key-positions = <30 29>;
-            layers = <0 2 4>;
+            layers = <0 2 4 6 8 10>;
+            timeout-ms = <40>;
+        };
+
+        m_ctrl_space {
+            bindings = <&kp LC(SPACE)>;
+            key-positions = <29 70>;
+            layers = <0 4>;
             timeout-ms = <50>;
         };
     };
