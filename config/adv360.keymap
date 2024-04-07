@@ -430,6 +430,7 @@
             key-positions = <30 29>;
             layers = <0 2 4 6 8 10>;
             timeout-ms = <40>;
+            require-prior-idle-ms = <50>;
         };
 
         m_ctrl_space {
@@ -470,7 +471,7 @@
         w_lshift_lctrl_enter {
             bindings = <&kp LC(LS(ENTER))>;
             key-positions = <32 31 69>;
-            timeout-ms = <50>;
+            timeout-ms = <70>;
             layers = <6 10>;
         };
 
@@ -484,7 +485,7 @@
         sticky_shift {
             bindings = <&sk LSHIFT>;
             key-positions = <31 42>;
-            timeout-ms = <40>;
+            timeout-ms = <50>;
             layers = <0 6>;
         };
     };
@@ -900,9 +901,9 @@
             bindings = <
 &none  &none  &none  &none  &none  &none  &none                                                &none    &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none  &none                                                &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none        &none    &none      &none  &none        &none    &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none    &none        &none      &none  &none        &none    &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none                        &none      &none                        &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none         &kp LS(TAB)  &kp TAB  &none      &none  &kp RS(TAB)  &kp TAB         &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none         &kp TAB  &kp LS(TAB)  &none      &none  &kp RS(TAB)  &kp TAB         &none  &none  &none  &none  &none
             >;
         };
 
