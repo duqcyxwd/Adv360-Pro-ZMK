@@ -317,23 +317,26 @@
 
         m_delete_word_backward {
             bindings = <&kp LA(BACKSPACE)>;
-            key-positions = <65 32>;
+            key-positions = <65 32 31>;
             timeout-ms = <50>;
             layers = <0 4>;
+            require-prior-idle-ms = <(-1)>;
         };
 
         m_delete_word_forward {
             bindings = <&kp LA(DELETE)>;
-            key-positions = <66 32>;
+            key-positions = <66 32 31>;
             timeout-ms = <50>;
             layers = <0 4>;
+            require-prior-idle-ms = <(-1)>;
         };
 
         m_delete_line {
             bindings = <&m_delete_line>;
-            key-positions = <65 31>;
+            key-positions = <65 31 30>;
             timeout-ms = <50>;
             layers = <0 4>;
+            require-prior-idle-ms = <(-1)>;
         };
 
         w_paste_plain {
@@ -366,16 +369,18 @@
 
         w_delete_word_backward {
             bindings = <&kp LC(BACKSPACE)>;
-            key-positions = <65 32>;
+            key-positions = <65 32 31>;
             timeout-ms = <50>;
             layers = <6 10>;
+            require-prior-idle-ms = <(-1)>;
         };
 
         w_delete_word_forward {
             bindings = <&kp LC(DELETE)>;
-            key-positions = <66 32>;
+            key-positions = <66 32 31>;
             timeout-ms = <50>;
             layers = <6 10>;
+            require-prior-idle-ms = <(-1)>;
         };
 
         m_next_lang {
@@ -394,9 +399,10 @@
 
         w_delete_line_easy {
             bindings = <&w_delete_line>;
-            key-positions = <65 31>;
+            key-positions = <65 31 30>;
             timeout-ms = <50>;
             layers = <6 10>;
+            require-prior-idle-ms = <(-1)>;
         };
 
         backspace_repeat {
@@ -487,6 +493,7 @@
             key-positions = <31 42>;
             timeout-ms = <50>;
             layers = <0 6>;
+            require-prior-idle-ms = <1>;
         };
 
         m_alt_tab {
@@ -915,9 +922,9 @@
             bindings = <
 &none  &none  &none  &none  &none  &none  &none                                                &none    &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none  &none                                                &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none    &none        &none      &none  &none        &none    &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none        &none    &none      &none  &none        &none    &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none                        &none      &none                        &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none         &kp TAB  &kp LS(TAB)  &none      &none  &kp RS(TAB)  &kp TAB         &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none         &kp LS(TAB)  &kp TAB  &none      &none  &kp RS(TAB)  &kp TAB         &none  &none  &none  &none  &none
             >;
         };
 
