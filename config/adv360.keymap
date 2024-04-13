@@ -616,6 +616,7 @@
                 <&macro_press>,
                 <&kp TAB>,
                 <&macro_release>,
+                <&kp TAB>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&kp LEFT_ALT>,
