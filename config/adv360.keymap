@@ -507,7 +507,7 @@
         m_detele_word_backward_cross {
             bindings = <&kp LA(BACKSPACE)>;
             key-positions = <65 41>;
-            timeout-ms = <50>;
+            timeout-ms = <70>;
             require-prior-idle-ms = <(-1)>;
             layers = <0 4>;
         };
@@ -515,7 +515,7 @@
         m_delete_word_forward_cross {
             bindings = <&kp LA(DELETE)>;
             key-positions = <66 41>;
-            timeout-ms = <50>;
+            timeout-ms = <70>;
             require-prior-idle-ms = <(-1)>;
             layers = <0 4>;
         };
@@ -523,7 +523,7 @@
         m_delete_line_cross {
             bindings = <&m_delete_line>;
             key-positions = <65 42>;
-            timeout-ms = <50>;
+            timeout-ms = <70>;
             require-prior-idle-ms = <(-1)>;
             layers = <0 4>;
         };
@@ -531,7 +531,7 @@
         w_delete_word_backward_cross {
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <65 41>;
-            timeout-ms = <50>;
+            timeout-ms = <70>;
             require-prior-idle-ms = <(-1)>;
             layers = <6 10>;
         };
@@ -539,7 +539,7 @@
         w_delete_word_forward_cross {
             bindings = <&kp LC(DELETE)>;
             key-positions = <66 41>;
-            timeout-ms = <50>;
+            timeout-ms = <70>;
             require-prior-idle-ms = <(-1)>;
             layers = <6 10>;
         };
@@ -547,7 +547,7 @@
         w_delete_line_cross {
             bindings = <&w_delete_line>;
             key-positions = <65 42>;
-            timeout-ms = <50>;
+            timeout-ms = <70>;
             require-prior-idle-ms = <(-1)>;
             layers = <6 10>;
         };
