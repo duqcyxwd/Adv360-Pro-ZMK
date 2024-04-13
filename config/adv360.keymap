@@ -491,15 +491,17 @@
         m_alt_tab {
             bindings = <&m_alt_tab_layer>;
             key-positions = <47 48>;
-            timeout-ms = <50>;
+            timeout-ms = <65>;
             layers = <0 4>;
+            require-prior-idle-ms = <(-1)>;
         };
 
         w_alt_tab {
             bindings = <&w_alt_tab_layer>;
             key-positions = <47 48>;
-            timeout-ms = <50>;
+            timeout-ms = <65>;
             layers = <6 10>;
+            require-prior-idle-ms = <(-1)>;
         };
 
         m_detele_word_backward_cross {
