@@ -553,7 +553,7 @@
         };
 
         left_square_bracket {
-            bindings = <&kp LS(LEFT_BRACE)>;
+            bindings = <&kp LEFT_BRACE>;
             key-positions = <16 17>;
             layers = <3 9>;
             timeout-ms = <65>;
@@ -561,7 +561,7 @@
         };
 
         right_square_bracket {
-            bindings = <&kp LS(RIGHT_BRACE)>;
+            bindings = <&kp RIGHT_BRACE>;
             key-positions = <17 18>;
             timeout-ms = <65>;
             require-prior-idle-ms = <(-1)>;
