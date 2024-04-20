@@ -435,41 +435,41 @@
             bindings = <&kp LC(SPACE)>;
             key-positions = <29 70>;
             layers = <0 4>;
-            timeout-ms = <50>;
+            timeout-ms = <80>;
         };
 
         m_command_space {
             bindings = <&kp LG(SPACE)>;
             key-positions = <32 70>;
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             layers = <0 4>;
         };
 
         w_ctrl_space {
             bindings = <&kp LC(SPACE)>;
             key-positions = <32 70>;
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             layers = <6 10>;
         };
 
         m_lalt_lgui_space {
             bindings = <&kp LG(LA(SPACE))>;
             key-positions = <32 30 70>;
-            timeout-ms = <50>;
+            timeout-ms = <95>;
             layers = <0 4>;
         };
 
         m_lshift_lgui_enter {
             bindings = <&kp LG(LS(ENTER))>;
             key-positions = <32 31 69>;
-            timeout-ms = <50>;
+            timeout-ms = <95>;
             layers = <0 4>;
         };
 
         w_lshift_lctrl_enter {
             bindings = <&kp LC(LS(ENTER))>;
             key-positions = <32 31 69>;
-            timeout-ms = <70>;
+            timeout-ms = <95>;
             layers = <6 10>;
         };
 
@@ -478,14 +478,6 @@
             key-positions = <46 59>;
             timeout-ms = <70>;
             layers = <0 6>;
-        };
-
-        sticky_shift {
-            bindings = <&sk LSHIFT>;
-            key-positions = <31 42>;
-            timeout-ms = <50>;
-            layers = <0 6>;
-            require-prior-idle-ms = <1>;
         };
 
         m_alt_tab {
