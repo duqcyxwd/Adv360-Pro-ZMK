@@ -490,8 +490,8 @@
 
         m_alt_tab {
             bindings = <&m_alt_tab_layer>;
-            key-positions = <48 49 50>;
-            timeout-ms = <100>;
+            key-positions = <48 47>;
+            timeout-ms = <85>;
             layers = <0 4>;
             require-prior-idle-ms = <(-1)>;
         };
@@ -499,7 +499,7 @@
         w_alt_tab {
             bindings = <&w_alt_tab_layer>;
             key-positions = <47 48>;
-            timeout-ms = <60>;
+            timeout-ms = <85>;
             layers = <6 10>;
             require-prior-idle-ms = <(-1)>;
         };
