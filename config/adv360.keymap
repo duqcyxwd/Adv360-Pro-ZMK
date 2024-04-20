@@ -919,11 +919,11 @@
 
         WinBase {
             bindings = <
-&kp PLUS                            &kp N1     &kp N2     &kp N3     &kp N4     &kp N5  &mo 15                                                                                                              &mo 15                 &kp N6  &kp N7    &kp N8     &kp N9      &kp N0         &kp MINUS
+&none                               &kp N1     &kp N2     &kp N3     &kp N4     &kp N5  &mo 15                                                                                                              &mo 15                 &kp N6  &kp N7    &kp N8     &kp N9      &kp N0         &kp MINUS
 &kp TAB                             &kp Q      &kp W      &kp E      &kp R      &kp T   &none                                                                                                               &none                  &kp Y   &kp U     &kp I      &kp O       &kp P          &kp NON_US_BACKSLASH
-&sl 7                               &kp A      &kp S      &kp D      &kp F      &kp G   &kp LS(LA(LG(RCTRL)))  &kp ESCAPE        &kp LEFT_WIN      &thumb_kp_sticky_key RALT RALT  &kp TAB                  &kp RS(RA(RG(RCTRL)))  &kp H   &kp J     &kp K      &kp L       &kp SEMICOLON  &sl 8
+&sl 7                               &kp A      &kp S      &kp D      &kp F      &kp G   &kp LS(LA(LG(RCTRL)))  &kp LCTRL         &kp LEFT_WIN      &thumb_kp_sticky_key RALT RALT  &kp RCTRL                &kp RS(RA(RG(RCTRL)))  &kp H   &kp J     &kp K      &kp L       &kp SEMICOLON  &sl 8
 &thumb_kp_sticky_key LSHIFT LSHIFT  &kp Z      &kp X      &kp C      &kp V      &kp B                                            &kp HOME          &kp PAGE_UP                                                                     &kp N   &kp M     &kp COMMA  &kp PERIOD  &kp SLASH      &thumb_kp_sticky_key RSHIFT RSHIFT
-&kp LCTRL                           &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)          &thumb 9 BACKSPACE     &thumb 11 DELETE  &kp END           &kp PAGE_DOWN                   &thumb_mod RSHIFT ENTER  &space 10 SPACE                &kp LEFT  &kp DOWN   &kp UP      &kp RIGHT      &layer_with_mod 12 RALT
+&kp ESCAPE                          &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)          &thumb 9 BACKSPACE     &thumb 11 DELETE  &kp END           &kp PAGE_DOWN                   &thumb_mod RSHIFT ENTER  &space 10 SPACE                &kp LEFT  &kp DOWN   &kp UP      &kp RIGHT      &none
             >;
         };
 
