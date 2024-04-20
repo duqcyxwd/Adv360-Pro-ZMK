@@ -490,8 +490,8 @@
 
         m_alt_tab {
             bindings = <&m_alt_tab_layer>;
-            key-positions = <47 48>;
-            timeout-ms = <60>;
+            key-positions = <48 49 50>;
+            timeout-ms = <100>;
             layers = <0 4>;
             require-prior-idle-ms = <(-1)>;
         };
@@ -507,7 +507,7 @@
         m_detele_word_backward_cross {
             bindings = <&kp LA(BACKSPACE)>;
             key-positions = <65 41>;
-            timeout-ms = <70>;
+            timeout-ms = <85>;
             require-prior-idle-ms = <(-1)>;
             layers = <0 4>;
         };
@@ -515,7 +515,7 @@
         m_delete_word_forward_cross {
             bindings = <&kp LA(DELETE)>;
             key-positions = <66 41>;
-            timeout-ms = <70>;
+            timeout-ms = <85>;
             require-prior-idle-ms = <(-1)>;
             layers = <0 4>;
         };
@@ -531,7 +531,7 @@
         w_delete_word_backward_cross {
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <65 41>;
-            timeout-ms = <70>;
+            timeout-ms = <85>;
             require-prior-idle-ms = <(-1)>;
             layers = <6 10>;
         };
@@ -539,7 +539,7 @@
         w_delete_word_forward_cross {
             bindings = <&kp LC(DELETE)>;
             key-positions = <66 41>;
-            timeout-ms = <70>;
+            timeout-ms = <85>;
             require-prior-idle-ms = <(-1)>;
             layers = <6 10>;
         };
@@ -614,6 +614,7 @@
                 <&kp LEFT_ALT>,
                 <&macro_release>,
                 <&mo 12>,
+                <&macro_press>,
                 <&macro_press>;
 
             label = "TEST";
@@ -863,11 +864,11 @@
 
         MacBase {
             bindings = <
-&kp EQUAL                           &kp N1     &kp N2     &kp N3     &kp N4     &kp N5  &mo 15                                                                                        &mo 15                &kp N6  &kp N7    &kp N8     &kp N9        &kp N0         &kp MINUS
+&none                               &kp N1     &kp N2     &kp N3     &kp N4     &kp N5  &mo 15                                                                                        &mo 15                &kp N6  &kp N7    &kp N8     &kp N9        &kp N0         &kp MINUS
 &kp TAB                             &kp Q      &kp W      &kp E      &kp R      &kp T   &none                                                                                         &kp F23               &kp Y   &kp U     &kp I      &kp O         &kp P          &kp BACKSLASH
-&sl 1                               &kp A      &kp S      &kp D      &kp F      &kp G   &kp LS(LA(LC(LGUI)))  &kp ESCAPE       &kp LCTRL      &kp RIGHT_ALT  &kp TAB                  &kp RS(RA(RC(RGUI)))  &kp H   &kp J     &kp K      &kp L         &kp SEMICOLON  &sl 2
+&sl 1                               &kp A      &kp S      &kp D      &kp F      &kp G   &kp LS(LA(LC(LGUI)))  &kp LGUI         &kp LCTRL      &kp RIGHT_ALT  &kp RGUI                 &kp RS(RA(RC(RGUI)))  &kp H   &kp J     &kp K      &kp L         &kp SEMICOLON  &sl 2
 &thumb_kp_sticky_key LSHIFT LSHIFT  &kp Z      &kp X      &kp C      &kp V      &kp B                                          &kp HOME       &kp PG_UP                                                     &kp N   &kp M     &kp COMMA  &kp DOT       &kp FSLH       &thumb_kp_sticky_key RSHIFT RSHIFT
-&kp LCMD                            &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)          &thumb 3 BACKSPACE    &thumb 5 DELETE  &kp END        &kp PG_DN      &thumb_mod RSHIFT ENTER  &space 4 SPACE                &kp LEFT  &kp DOWN   &kp UP_ARROW  &kp RIGHT      &caps_word
+&kp ESCAPE                          &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)          &thumb 3 BACKSPACE    &thumb 5 DELETE  &kp END        &kp PG_DN      &thumb_mod RSHIFT ENTER  &space 4 SPACE                &kp LEFT  &kp DOWN   &kp UP_ARROW  &kp RIGHT      &none
             >;
         };
 
