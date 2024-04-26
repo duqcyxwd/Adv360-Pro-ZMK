@@ -455,7 +455,7 @@
         m_lalt_lgui_space {
             bindings = <&kp LG(LA(SPACE))>;
             key-positions = <32 30 70>;
-            timeout-ms = <95>;
+            timeout-ms = <110>;
             layers = <0 4>;
         };
 
@@ -558,6 +558,27 @@
             timeout-ms = <65>;
             require-prior-idle-ms = <(-1)>;
             layers = <3 9>;
+        };
+
+        lalt_enter {
+            bindings = <&none>;
+            key-positions = <30 69>;
+            timeout-ms = <100>;
+            layers = <0 6>;
+        };
+
+        w_lctrl_slash {
+            bindings = <&kp LC(SLASH)>;
+            key-positions = <32 58>;
+            timeout-ms = <77>;
+            layers = <6>;
+        };
+
+        m_lgui_slack {
+            bindings = <&kp LG(SLASH)>;
+            key-positions = <32 58>;
+            timeout-ms = <75>;
+            layers = <0>;
         };
     };
 
@@ -852,7 +873,7 @@
         MacBase {
             bindings = <
 &none                               &kp N1     &kp N2     &kp N3     &kp N4     &kp N5  &mo 15                                                                                        &mo 15                &kp N6  &kp N7    &kp N8     &kp N9        &kp N0         &kp MINUS
-&kp TAB                             &kp Q      &kp W      &kp E      &kp R      &kp T   &none                                                                                         &kp F23               &kp Y   &kp U     &kp I      &kp O         &kp P          &kp BACKSLASH
+&kp TAB                             &kp Q      &kp W      &kp E      &kp R      &kp T   &kp LS(LA(LCTRL))                                                                             &kp RS(RA(RCTRL))     &kp Y   &kp U     &kp I      &kp O         &kp P          &kp BACKSLASH
 &sl 1                               &kp A      &kp S      &kp D      &kp F      &kp G   &kp LS(LA(LC(LGUI)))  &kp LGUI         &kp LCTRL      &kp RIGHT_ALT  &kp RGUI                 &kp RS(RA(RC(RGUI)))  &kp H   &kp J     &kp K      &kp L         &kp SEMICOLON  &sl 2
 &thumb_kp_sticky_key LSHIFT LSHIFT  &kp Z      &kp X      &kp C      &kp V      &kp B                                          &kp HOME       &kp PG_UP                                                     &kp N   &kp M     &kp COMMA  &kp DOT       &kp FSLH       &thumb_kp_sticky_key RSHIFT RSHIFT
 &kp ESCAPE                          &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)          &thumb 3 BACKSPACE    &thumb 5 DELETE  &kp END        &kp PG_DN      &thumb_mod RSHIFT ENTER  &space 4 SPACE                &kp LEFT  &kp DOWN   &kp UP_ARROW  &kp RIGHT      &none
@@ -912,7 +933,7 @@
         WinBase {
             bindings = <
 &none                               &kp N1     &kp N2     &kp N3     &kp N4     &kp N5  &mo 15                                                                                                              &mo 15                 &kp N6  &kp N7    &kp N8     &kp N9      &kp N0         &kp MINUS
-&kp TAB                             &kp Q      &kp W      &kp E      &kp R      &kp T   &none                                                                                                               &none                  &kp Y   &kp U     &kp I      &kp O       &kp P          &kp NON_US_BACKSLASH
+&kp TAB                             &kp Q      &kp W      &kp E      &kp R      &kp T   &kp LS(LA(LCTRL))                                                                                                   &kp RS(RA(RCTRL))      &kp Y   &kp U     &kp I      &kp O       &kp P          &kp NON_US_BACKSLASH
 &sl 7                               &kp A      &kp S      &kp D      &kp F      &kp G   &kp LS(LA(LG(RCTRL)))  &kp LCTRL         &kp LEFT_WIN      &thumb_kp_sticky_key RALT RALT  &kp RCTRL                &kp RS(RA(RG(RCTRL)))  &kp H   &kp J     &kp K      &kp L       &kp SEMICOLON  &sl 8
 &thumb_kp_sticky_key LSHIFT LSHIFT  &kp Z      &kp X      &kp C      &kp V      &kp B                                            &kp HOME          &kp PAGE_UP                                                                     &kp N   &kp M     &kp COMMA  &kp PERIOD  &kp SLASH      &thumb_kp_sticky_key RSHIFT RSHIFT
 &kp ESCAPE                          &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)          &thumb 9 BACKSPACE     &thumb 11 DELETE  &kp END           &kp PAGE_DOWN                   &thumb_mod RSHIFT ENTER  &space 10 SPACE                &kp LEFT  &kp DOWN   &kp UP      &kp RIGHT      &none
