@@ -560,13 +560,6 @@
             layers = <3 9>;
         };
 
-        lalt_enter {
-            bindings = <&none>;
-            key-positions = <30 69>;
-            timeout-ms = <100>;
-            layers = <0 6>;
-        };
-
         w_lctrl_slash {
             bindings = <&kp LC(SLASH)>;
             key-positions = <32 58>;
@@ -574,11 +567,32 @@
             layers = <6>;
         };
 
-        m_lgui_slack {
+        m_lgui_slash {
             bindings = <&kp LG(SLASH)>;
             key-positions = <32 58>;
             timeout-ms = <75>;
             layers = <0>;
+        };
+
+        lalt_enter {
+            bindings = <&kp LA(ENTER)>;
+            key-positions = <30 69>;
+            timeout-ms = <85>;
+            layers = <0 6>;
+        };
+
+        r_alt_one {
+            bindings = <&kp RA(NUMBER_1)>;
+            key-positions = <43 1>;
+            timeout-ms = <100>;
+            layers = <0 6>;
+        };
+
+        r_alt_2 {
+            bindings = <&kp RA(NUMBER_2)>;
+            key-positions = <43 2>;
+            timeout-ms = <100>;
+            layers = <0 6>;
         };
     };
 
