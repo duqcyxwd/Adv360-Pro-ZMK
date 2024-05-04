@@ -945,7 +945,14 @@
         mac_mode_r_to_l: mac_mode_r_to_l {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_release>, <&sl 2>, <&macro_press>, <&sl 1>;
+            bindings =
+                <&macro_release>,
+                <&sl 2>,
+                <&macro_press>,
+                <&sl 1>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&sl 1>;
 
             label = "MAC_MODE_R_TO_L";
         };
