@@ -550,14 +550,14 @@
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <16 17>;
             layers = <4 9>;
-            timeout-ms = <65>;
+            timeout-ms = <80>;
             require-prior-idle-ms = <(-1)>;
         };
 
         right_square_bracket {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <17 18>;
-            timeout-ms = <65>;
+            timeout-ms = <80>;
             require-prior-idle-ms = <(-1)>;
             layers = <4 9>;
         };
@@ -604,11 +604,27 @@
             timeout-ms = <75>;
         };
 
-        m_select_all {
-            bindings = <&kp LG(A)>;
-            key-positions = <29 30 31 32>;
-            timeout-ms = <100>;
-            layers = <3>;
+        sym_at_sign {
+            bindings = <&kp AT>;
+            key-positions = <16 17 18>;
+            timeout-ms = <80>;
+            layers = <4 9>;
+            require-prior-idle-ms = <(-1)>;
+        };
+
+        sym_excl {
+            bindings = <&kp EXCL>;
+            key-positions = <15 16>;
+            layers = <4 9>;
+            require-prior-idle-ms = <(-1)>;
+            timeout-ms = <81>;
+        };
+
+        sym_amp {
+            bindings = <&kp AMPS>;
+            key-positions = <47 48>;
+            timeout-ms = <80>;
+            layers = <4 9>;
         };
     };
 
