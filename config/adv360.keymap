@@ -342,7 +342,7 @@
         m_select_word_base {
             bindings = <&m_select_word_mod>;
             key-positions = <72 73>;
-            layers = <0 4>;
+            layers = <0>;
             timeout-ms = <50>;
         };
 
@@ -395,7 +395,7 @@
             bindings = <&w_select_word_mod>;
             key-positions = <72 73>;
             timeout-ms = <50>;
-            layers = <6 10>;
+            layers = <6>;
         };
 
         w_select_word_nav {
