@@ -626,6 +626,13 @@
             timeout-ms = <80>;
             layers = <4 9>;
         };
+
+        sym_tilde {
+            bindings = <&kp TILDE>;
+            key-positions = <48 49>;
+            timeout-ms = <80>;
+            layers = <4 9>;
+        };
     };
 
     macros {
