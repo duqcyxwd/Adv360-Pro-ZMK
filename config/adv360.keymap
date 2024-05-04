@@ -892,7 +892,7 @@
 &kp TAB                             &kp Q         &kp W        &kp E        &kp R           &kp T   &kp LS(LA(LCTRL))                                                                             &kp RS(RA(RCTRL))     &kp Y   &kp U           &kp I        &kp O         &kp P                 &kp BACKSLASH
 &sl 1                               &hml LCTRL A  &hml LALT S  &hml LGUI D  &hmsl LSHIFT F  &kp G   &kp LS(LA(LC(LGUI)))  &kp LGUI         &kp LCTRL      &kp RIGHT_ALT  &kp RGUI                 &kp RS(RA(RC(RGUI)))  &kp H   &hmsr RSHIFT J  &hmr RGUI K  &hmr RALT L   &hmr RCTRL SEMICOLON  &sl 2
 &thumb_kp_sticky_key LSHIFT LSHIFT  &kp Z         &kp X        &kp C        &kp V           &kp B                                          &kp HOME       &kp PG_UP                                                     &kp N   &kp M           &kp COMMA    &kp DOT       &kp FSLH              &thumb_kp_sticky_key RSHIFT RSHIFT
-&kp ESCAPE                          &kp LG(Z)     &kp LG(X)    &kp LG(C)    &kp LG(V)               &thumb 3 BACKSPACE    &thumb 5 DELETE  &kp END        &kp PG_DN      &thumb_mod RSHIFT ENTER  &thumb 4 SPACE                &kp LEFT        &kp DOWN     &kp UP_ARROW  &kp RIGHT             &none
+&kp ESCAPE                          &kp LG(Z)     &kp LG(X)    &kp LG(C)    &kp LG(V)               &thumb 3 BACKSPACE    &thumb 5 DELETE  &kp END        &kp PG_DN      &thumb_mod RSHIFT ENTER  &space 4 SPACE                &kp LEFT        &kp DOWN     &kp UP_ARROW  &kp RIGHT             &none
             >;
         };
 
