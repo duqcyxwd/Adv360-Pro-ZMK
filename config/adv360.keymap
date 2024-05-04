@@ -633,6 +633,14 @@
             timeout-ms = <80>;
             layers = <4 9>;
         };
+
+        sym_zero {
+            bindings = <&kp N0>;
+            key-positions = <55 56>;
+            timeout-ms = <80>;
+            layers = <4 9>;
+            require-prior-idle-ms = <(-1)>;
+        };
     };
 
     macros {
