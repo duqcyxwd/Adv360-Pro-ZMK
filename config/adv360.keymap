@@ -294,7 +294,7 @@
             bindings = <&kp LA(LEFT)>;
             key-positions = <71 72>;
             timeout-ms = <50>;
-            layers = <0 4>;
+            layers = <0>;
         };
 
         Mac_Base_Next_Word {
