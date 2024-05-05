@@ -301,7 +301,7 @@
             bindings = <&kp RA(RIGHT)>;
             key-positions = <73 74>;
             timeout-ms = <50>;
-            layers = <0 4>;
+            layers = <0>;
         };
 
         Mac_Nav_Pev_Word {
