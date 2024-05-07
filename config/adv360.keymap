@@ -723,6 +723,20 @@
             layers = <4 10>;
             require-prior-idle-ms = <(-1)>;
         };
+
+        w_l_meta {
+            bindings = <&sk LS(LA(LCTRL))>;
+            key-positions = <30 31 32>;
+            timeout-ms = <60>;
+            layers = <6>;
+        };
+
+        w_r_meta {
+            bindings = <&sk RS(RA(RCTRL))>;
+            key-positions = <41 42 43>;
+            timeout-ms = <60>;
+            layers = <6>;
+        };
     };
 
     macros {
