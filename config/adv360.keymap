@@ -693,8 +693,8 @@
             layers = <0 6>;
         };
 
-        cappy {
-            bindings = <&caps_word>;
+        win_fn_sticky {
+            bindings = <&sl 11>;
             key-positions = <65 70>;
             timeout-ms = <62>;
             layers = <0 6>;
