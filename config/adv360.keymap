@@ -229,7 +229,6 @@
             tapping-term-ms = <99999>;
             quick-tap-ms = <170>;
             flavor = "balanced";
-            hold-while-undecided;
             retro-tap;
             hold-trigger-key-positions = <65 66 69 70>;
         };
