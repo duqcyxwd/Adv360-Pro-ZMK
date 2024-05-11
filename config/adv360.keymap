@@ -452,28 +452,34 @@
 
         backspace_repeat {
             bindings = <&backspace_repeat>;
-            key-positions = <65 46>;
+            key-positions = <65 29>;
             layers = <0 3 6 9>;
-            timeout-ms = <50>;
+            timeout-ms = <35>;
+            require-prior-idle-ms = <(-1)>;
         };
 
         delete_repeat {
             bindings = <&delete_repeat>;
-            key-positions = <66 46>;
-            timeout-ms = <50>;
+            key-positions = <66 29>;
+            timeout-ms = <35>;
             layers = <0 3 6 9>;
+            require-prior-idle-ms = <(-1)>;
         };
 
         whitespace_repeat {
             bindings = <&whitespace_repeat>;
-            key-positions = <59 70>;
+            key-positions = <70 44>;
             layers = <0 4 6 9>;
+            timeout-ms = <35>;
+            require-prior-idle-ms = <(-1)>;
         };
 
         enter_repeat {
             bindings = <&enter_repeat>;
-            key-positions = <59 69>;
+            key-positions = <69 44>;
             layers = <0 3 6 9>;
+            timeout-ms = <35>;
+            require-prior-idle-ms = <(-1)>;
         };
 
         m_ctrl_space {
