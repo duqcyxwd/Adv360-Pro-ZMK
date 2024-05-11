@@ -745,12 +745,20 @@
             layers = <6>;
         };
 
-        enter {
-            bindings = <&kp ENTER>;
-            key-positions = <43 42>;
-            timeout-ms = <50>;
+        mac_mode_l {
+            bindings = <&sl 1>;
+            key-positions = <31 30>;
+            timeout-ms = <25>;
             require-prior-idle-ms = <(-1)>;
-            layers = <0 1 6 7>;
+            layers = <0>;
+        };
+
+        mac_mode_r {
+            bindings = <&sl 2>;
+            key-positions = <42 43>;
+            timeout-ms = <25>;
+            require-prior-idle-ms = <(-1)>;
+            layers = <0>;
         };
     };
 
