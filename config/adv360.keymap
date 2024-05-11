@@ -533,9 +533,9 @@
 
         m_alt_tab {
             bindings = <&m_alt_tab_layer>;
-            key-positions = <48 47>;
-            timeout-ms = <85>;
-            layers = <0 3>;
+            key-positions = <31 32>;
+            timeout-ms = <35>;
+            layers = <0>;
             require-prior-idle-ms = <(-1)>;
         };
 
