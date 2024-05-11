@@ -731,20 +731,6 @@
             require-prior-idle-ms = <(-1)>;
         };
 
-        w_l_meta {
-            bindings = <&sk LS(LA(LCTRL))>;
-            key-positions = <30 31 32>;
-            timeout-ms = <60>;
-            layers = <6>;
-        };
-
-        w_r_meta {
-            bindings = <&sk RS(RA(RCTRL))>;
-            key-positions = <41 42 43>;
-            timeout-ms = <60>;
-            layers = <6>;
-        };
-
         mac_mode_l {
             bindings = <&sl 1>;
             key-positions = <31 30>;
@@ -759,6 +745,22 @@
             timeout-ms = <35>;
             require-prior-idle-ms = <(-1)>;
             layers = <0>;
+        };
+
+        mac_mode_l_to_r {
+            bindings = <&sl 2>;
+            key-positions = <43 42>;
+            timeout-ms = <35>;
+            require-prior-idle-ms = <(-1)>;
+            layers = <1>;
+        };
+
+        mac_mode_r_to_l_combo {
+            bindings = <&mac_mode_r_to_l>;
+            key-positions = <30 31>;
+            timeout-ms = <35>;
+            require-prior-idle-ms = <(-1)>;
+            layers = <2>;
         };
     };
 
@@ -1109,7 +1111,7 @@
             bindings = <
 &kp ESCAPE  &kp N1     &kp N2    &kp N3     &kp N4    &kp N5  &none                                              &none      &kp N6  &kp N7    &kp N8     &kp N9        &kp N0     &none
 &kp TAB     &kp Q      &kp W     &kp E      &kp R     &kp T   &none                                              &none      &kp Y   &kp U     &kp I      &kp O         &kp P      &none
-&kp F24     &sk LCTRL  &sk LALT  &sk LSHFT  &sk LGUI  &kp G   &none     &none       &none      &none  &kp TAB    &none      &kp H   &kp J     &kp K      &kp L         &kp SEMI   &sl 2
+&kp ESCAPE  &sk LCTRL  &sk LALT  &sk LSHFT  &sk LGUI  &kp G   &none     &kp F24     &none      &none  &kp F24    &none      &kp H   &kp J     &kp K      &kp L         &kp SEMI   &sl 2
 &none       &kp Z      &kp X     &kp C      &kp V     &kp B                         &none      &none                        &kp N   &kp M     &kp COMMA  &kp DOT       &kp FSLH   &none
 &none       &none      &none     &none      &none             &kp BSPC  &kp DELETE  &none      &none  &kp ENTER  &kp SPACE          &kp LEFT  &kp DOWN   &kp UP_ARROW  &kp RIGHT  &none
             >;
