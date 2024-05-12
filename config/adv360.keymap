@@ -717,7 +717,7 @@
         sym_comma {
             bindings = <&kp COMMA>;
             key-positions = <56 57>;
-            timeout-ms = <80>;
+            timeout-ms = <45>;
             require-prior-idle-ms = <(-1)>;
             layers = <4 11>;
         };
@@ -725,7 +725,7 @@
         sym_dot {
             bindings = <&kp DOT>;
             key-positions = <57 58>;
-            timeout-ms = <80>;
+            timeout-ms = <65>;
             layers = <4 11>;
             require-prior-idle-ms = <(-1)>;
         };
