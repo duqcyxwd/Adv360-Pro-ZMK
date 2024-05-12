@@ -717,8 +717,8 @@
         base_enter {
             bindings = <&kp ENTER>;
             key-positions = <17 18>;
-            require-prior-idle-ms = <175>;
-            timeout-ms = <80>;
+            require-prior-idle-ms = <(-1)>;
+            timeout-ms = <35>;
             layers = <0 7>;
         };
 
