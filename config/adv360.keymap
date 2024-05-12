@@ -653,20 +653,12 @@
             timeout-ms = <75>;
         };
 
-        sym_at_sign {
-            bindings = <&kp AT>;
-            key-positions = <16 17 18>;
-            timeout-ms = <80>;
-            layers = <4 11>;
-            require-prior-idle-ms = <(-1)>;
-        };
-
         sym_excl {
             bindings = <&kp EXCL>;
-            key-positions = <15 16>;
+            key-positions = <30 17>;
             layers = <4 11>;
             require-prior-idle-ms = <(-1)>;
-            timeout-ms = <81>;
+            timeout-ms = <85>;
         };
 
         sym_amp {
@@ -816,6 +808,30 @@
             timeout-ms = <35>;
             require-prior-idle-ms = <(-1)>;
             layers = <9>;
+        };
+
+        sym_percent {
+            bindings = <&kp PERCENT>;
+            key-positions = <31 50>;
+            timeout-ms = <85>;
+            require-prior-idle-ms = <(-1)>;
+            layers = <4 11>;
+        };
+
+        sym_at_two_key {
+            bindings = <&kp AT>;
+            key-positions = <30 49>;
+            timeout-ms = <85>;
+            require-prior-idle-ms = <(-1)>;
+            layers = <4 11>;
+        };
+
+        sym_question {
+            bindings = <&kp QUESTION>;
+            key-positions = <32 17>;
+            timeout-ms = <85>;
+            require-prior-idle-ms = <(-1)>;
+            layers = <4 11>;
         };
     };
 
