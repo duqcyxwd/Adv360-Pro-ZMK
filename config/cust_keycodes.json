@@ -86,40 +86,6 @@
 	},
 	{
 		"names": [
-			"LC("
-		],
-		"description": "LC(",
-		"clarify": false,
-		"documentation": "",
-		"os": {
-			"windows": true,
-			"linux": true,
-			"android": true,
-			"macos": true,
-			"ios": true
-		},
-		"footnotes": {},
-		"type": "UD"
-	},
-	{
-		"names": [
-			"LS(N4))"
-		],
-		"description": "LS(N4))",
-		"clarify": false,
-		"documentation": "",
-		"os": {
-			"windows": true,
-			"linux": true,
-			"android": true,
-			"macos": true,
-			"ios": true
-		},
-		"footnotes": {},
-		"type": "UD"
-	},
-	{
-		"names": [
 			"LGUI(LS(N4))"
 		],
 		"description": "LGUI(LS(N4))",
