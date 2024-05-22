@@ -28,10 +28,17 @@
         #binding-cells = <2>;
         tapping-term-ms = <200>;
         quick_tap_ms = <175>;
-        flavor = "tap-preferred";
+        flavor = "balanced";
         bindings = <&kp>, <&kp>;
     };
   };
+
+
+  // MacOS shortcuts
+  #define _SCRNS &kp LG(LS(N4))    // Screenshot
+  #define _EMOJI &kp LC(LG(SPACE)) // Emoji picker
+  #define _NEXTS &kp LC(RIGHT)     // Next screen
+  #define _PREVS &kp LC(LEFT)      // Previous screen
 
     keymap {
         compatible = "zmk,keymap";
