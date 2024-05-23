@@ -109,11 +109,11 @@
 
         Mac {
             bindings = <
-&trans  &trans              &trans                &trans              &trans               &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans              &trans                &trans              &trans               &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LC(LEFT_ARROW)  &kp LG(LS(NUMBER_4))  &kt LC(UP_ARROW)    &kp LC(RIGHT_ARROW)  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans              &trans                &kp LC(DOWN_ARROW)  &trans               &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans              &trans                &trans              &trans                       &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans                &trans              &trans              &trans               &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LG(LS(NUMBER_4))  &trans              &kp LG(TAB)         &trans               &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(LEFT_ARROW)    &kp LG(LEFT_ARROW)  &kt LC(UP_ARROW)    &kp LG(RIGHT_ARROW)  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                &trans              &kp LC(DOWN_ARROW)  &trans               &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                &trans              &trans              &trans                       &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
