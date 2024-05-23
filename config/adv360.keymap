@@ -250,7 +250,7 @@
             bindings = <
 &trans  &trans  &trans                    &trans       &trans        &trans       &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans                    &trans       &trans        &trans       &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LC(LG(LS(NUMBER_4)))  &m_cmd_left  &m_cmd_right  &m_ctl_up    &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LC(LG(LS(NUMBER_4)))  &m_cmd_left  &m_cmd_right  &m_ctl_up    &trans  &trans  &trans      &trans  &trans  &trans  &kp H   &kp J   &kp K   &kp L   &trans  &trans
 &trans  &trans  &trans                    &m_ctl_left  &m_ctl_right  &m_ctl_down                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans                    &trans       &trans                     &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
