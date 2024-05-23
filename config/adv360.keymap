@@ -64,6 +64,7 @@
             require-prior-idle-ms = <0>;
             flavor = "tap-preferred";
             quick-tap-ms = <175>;
+            hold-trigger-key-positions = <22 40 54 23 24 25 43 42 41 55 56 57 37 38 69 70 53 68 26 44 58 74 73 72 71 8 9 10 11 12>;
         };
 
         c_hm_r: c_hm_r {
@@ -76,7 +77,7 @@
             require-prior-idle-ms = <0>;
             flavor = "tap-preferred";
             quick-tap-ms = <175>;
-            hold-trigger-key-positions = <16 17 18 20 19 30 31 33 32 34 51 50 49 48 62 63 64 65 66 67 52 36 35 2 3 4 6 5>;
+            hold-trigger-key-positions = <16 17 18 19 30 31 33 32 51 50 49 48 62 63 64 65 66 67 52 36 35 3 4 5 1 2 15 29 47 61>;
         };
 
         lt_left: lt_left {
