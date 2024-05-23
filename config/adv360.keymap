@@ -192,11 +192,11 @@
 
         Mac {
             bindings = <
-&trans  &trans                    &trans               &trans              &trans               &trans              &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LG(LS(LC(NUMBER_4)))  &trans               &trans              &trans               &trans              &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LG(LEFT_ARROW)        &kp LG(RIGHT_ARROW)  &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)  &kp LC(UP_ARROW)    &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                    &trans               &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)  &kp LC(DOWN_ARROW)                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                    &trans               &trans              &trans                                   &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans                    &trans      &trans              &trans               &trans              &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LG(LS(LC(NUMBER_4)))  &trans      &trans              &trans               &trans              &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &cmd_left                 &cmd_right  &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)  &kp LC(UP_ARROW)    &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                    &trans      &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)  &kp LC(DOWN_ARROW)                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                    &trans      &trans              &trans                                   &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
