@@ -50,7 +50,7 @@
             label = "REV_LT";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            bindings = <&kp>, <&tog>;
+            bindings = <&kp>, <&sl>;
         };
     };
 
