@@ -108,7 +108,7 @@
     };
 
     macros {
-        macro_cmd_left: macro_cmd_left {
+        m_cmd_left: m_cmd_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -119,10 +119,10 @@
                 <&macro_release>,
                 <&kp LEFT_COMMAND>;
 
-            label = "MACRO_CMD_LEFT";
+            label = "M_CMD_LEFT";
         };
 
-        macro_cmd_right: macro_cmd_right {
+        m_cmd_right: m_cmd_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -133,10 +133,10 @@
                 <&macro_release>,
                 <&kp LEFT_COMMAND>;
 
-            label = "MACRO_CMD_RIGHT";
+            label = "M_CMD_RIGHT";
         };
 
-        macro_ctl_left: macro_ctl_left {
+        m_ctl_left: m_ctl_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -147,10 +147,10 @@
                 <&macro_release>,
                 <&kp LEFT_CONTROL>;
 
-            label = "MACRO_CTL_LEFT";
+            label = "M_CTL_LEFT";
         };
 
-        macro_ctl_right: macro_ctl_right {
+        m_ctl_right: m_ctl_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -161,10 +161,10 @@
                 <&macro_release>,
                 <&kp LEFT_CONTROL>;
 
-            label = "MACRO_CTL_RIGHT";
+            label = "M_CTL_RIGHT";
         };
 
-        macro_ctl_up: macro_ctl_up {
+        m_ctl_up: m_ctl_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -175,10 +175,10 @@
                 <&macro_release>,
                 <&kp LEFT_CONTROL>;
 
-            label = "MACRO_CTL_UP";
+            label = "M_CTL_UP";
         };
 
-        macro_ctl_down: macro_ctl_down {
+        m_ctl_down: m_ctl_down {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -189,7 +189,7 @@
                 <&macro_release>,
                 <&kp LEFT_CONTROL>;
 
-            label = "MACRO_CTL_DOWN";
+            label = "M_CTL_DOWN";
         };
     };
 
@@ -248,11 +248,11 @@
 
         Mac {
             bindings = <
-&trans  &trans  &trans                    &trans           &trans            &trans           &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans                    &trans           &trans            &trans           &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LC(LG(LS(NUMBER_4)))  &macro_cmd_left  &macro_cmd_right  &macro_ctl_up    &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans                    &trans           &trans            &macro_ctl_down                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans                    &trans           &trans                             &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans                    &trans       &trans        &trans       &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans                    &trans       &trans        &trans       &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LC(LG(LS(NUMBER_4)))  &m_cmd_left  &m_cmd_right  &m_ctl_up    &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans                    &m_ctl_left  &m_ctl_right  &m_ctl_down                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans                    &trans       &trans                     &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
