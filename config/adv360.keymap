@@ -17,8 +17,6 @@
 
 &lt { quick-tap-ms = <300>; };
 
-&mt { flavor = "balanced"; };
-
 / {
     behaviors {
         #include "macros.dtsi"
