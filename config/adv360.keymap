@@ -64,7 +64,7 @@
             require-prior-idle-ms = <0>;
             flavor = "tap-preferred";
             quick-tap-ms = <175>;
-            hold-trigger-key-positions = <22 40 54 23 24 25 43 42 41 55 56 57 37 38 69 70 53 68 26 44 58 74 73 72 71 8 9 10 11 12>;
+            hold-trigger-key-positions = <22 40 54 23 24 25 43 42 41 55 56 57 37 38 69 70 53 68 26 44 58 74 73 72 71 8 9 10 11 12 47 48 49 50>;
         };
 
         c_hm_r: c_hm_r {
