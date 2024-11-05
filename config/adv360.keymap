@@ -110,6 +110,11 @@
             bindings = <&kp LS(LA(LC(LG(ENTER))))>;
             key-positions = <41 42>;
         };
+
+        combo-switch {
+            bindings = <&kp LG(TAB)>;
+            key-positions = <42 43>;
+        };
     };
 
     macros {
