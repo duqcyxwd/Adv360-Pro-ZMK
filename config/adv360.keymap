@@ -54,7 +54,7 @@
             flavor = "tap-preferred";
         };
 
-        c_hm_l: c_hm_l {
+        c_hm_l: CUSTOM_HOME_MODE_LEFT {
             compatible = "zmk,behavior-hold-tap";
             label = "CUSTOM_HOME_MODE_LEFT";
             bindings = <&kp>, <&kp>;
@@ -67,7 +67,7 @@
             hold-trigger-key-positions = <22 40 54 23 24 25 43 42 41 55 56 57 37 38 69 70 53 68 26 44 58 74 73 72 71 8 9 10 11 12 47 48 49 50>;
         };
 
-        c_hm_r: c_hm_r {
+        c_hm_r: CUSTOM_HOME_MODE_RIGHT {
             compatible = "zmk,behavior-hold-tap";
             label = "CUSTOM_HOME_MODE_RIGHT";
             bindings = <&kp>, <&kp>;
@@ -104,6 +104,11 @@
             bindings = <&kp LC(RIGHT_ARROW)>;
             key-positions = <73 74>;
             layers = <0>;
+        };
+
+        cust_win_wip {
+            bindings = <&kp LS(LA(LC(LG(ENTER))))>;
+            key-positions = <41 42>;
         };
     };
 
