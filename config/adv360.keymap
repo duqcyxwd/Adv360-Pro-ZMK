@@ -94,26 +94,37 @@
     combos {
         compatible = "zmk,combos";
 
+        cust_win_wip {
+            bindings = <&kp LS(LA(LC(LG(ENTER))))>;
+            key-positions = <41 42>;
+            timeout-ms = <10>;
+        };
+
+        combo-switch {
+            bindings = <&kp LG(TAB)>;
+            key-positions = <42 43>;
+            timeout-ms = <10>;
+        };
+
+        Window_Right2 {
+            bindings = <&kp LC(RIGHT_ARROW)>;
+            key-positions = <63 64>;
+            layers = <0>;
+            timeout-ms = <10>;
+        };
+
         Window_Left {
             bindings = <&kp LC(LEFT_ARROW)>;
             key-positions = <71 72>;
             layers = <0>;
+            timeout-ms = <10>;
         };
 
         Window_Right {
             bindings = <&kp LC(RIGHT_ARROW)>;
             key-positions = <73 74>;
             layers = <0>;
-        };
-
-        cust_win_wip {
-            bindings = <&kp LS(LA(LC(LG(ENTER))))>;
-            key-positions = <41 42>;
-        };
-
-        combo-switch {
-            bindings = <&kp LG(TAB)>;
-            key-positions = <42 43>;
+            timeout-ms = <10>;
         };
     };
 
